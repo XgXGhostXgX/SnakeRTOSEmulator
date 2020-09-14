@@ -448,10 +448,12 @@ void checkDraw(unsigned char status, const char *msg)
 {
     if (status) {
         if (msg){
-            fprintf(stderr, "[ERROR] %s, %s\n", msg,tumGetErrorMessage());
+            //Comment out, because Error Showing for player no Name entered
+	    //fprintf(stderr, "[ERROR] %s, %s\n", msg,tumGetErrorMessage());
         }
         else {
-            fprintf(stderr, "[ERROR] %s\n", tumGetErrorMessage());
+	    //Comment out, because Error Showing for player no Name entered
+            //fprintf(stderr, "[ERROR] %s\n", tumGetErrorMessage());
         }
     }
 
