@@ -10,6 +10,7 @@
 #include "queue.h"
 #include "semphr.h"
 #include "task.h"
+#include "levelDraw.h"
 
 #include "TUM_Ball.h"
 #include "TUM_Draw.h"
@@ -159,8 +160,8 @@ static int p1X = 0;
 static int p1Y = 0;
 static int p2X = 0;
 static int p2Y = 0;
-char p1Name [10] = {0};
-char p2Name [10] = {0};
+char p1Name [10] = { 0 };
+char p2Name [10] = { 0 };
 int deleteP1Name=0;
 int deleteP2Name=0;
 int p1Selected = 1;
@@ -235,9 +236,9 @@ const unsigned char prev_state_signal = PREV_TASK;
 
 static TaskHandle_t StateMachine = NULL;
 static TaskHandle_t BufferSwap = NULL;
-static TaskHandle_t DemoTask1 = NULL;
-static TaskHandle_t DemoTask2 = NULL;
-static TaskHandle_t DemoTask3 = NULL;
+static TaskHandle_t MainMenu = NULL;
+static TaskHandle_t HighscoreScreen = NULL;
+static TaskHandle_t GameScreen = NULL;
 
 static QueueHandle_t StateQueue = NULL;
 static SemaphoreHandle_t DrawSignal = NULL;
@@ -439,19 +440,22 @@ node * snake2;
 
 static buttons_buffer_t buttons = { 0 };
 
+/**
+ * Method: Checking if any Drawing Type is Null or empty, then throw [ERROR]
+ * Parameter: status is if error is there, msg what error was it
+ */
 void checkDraw(unsigned char status, const char *msg)
 {
-    /**if (status) {
-        if (msg)
-            //fprintf(stderr, "[ERROR] %s, %s\n", msg,
-                    tumGetErrorMessage());
+    if (status) {
+        if (msg){
+            fprintf(stderr, "[ERROR] %s, %s\n", msg,tumGetErrorMessage());
+        }
         else {
-            //fprintf(stderr, "[ERROR] %s\n", tumGetErrorMessage());
+            fprintf(stderr, "[ERROR] %s\n", tumGetErrorMessage());
         }
     }
-    */
-}
 
+}
 /*
  * Method: Changes the state, either forwards of backwards
  * Parameter: ? (something for the RTOS)
@@ -516,36 +520,36 @@ initial_state:
         if (state_changed) {
             switch (current_state) {
                 case STATE_ONE:
-                    if (DemoTask3) {
-                        vTaskSuspend(DemoTask3);
+                    if (GameScreen) {
+                        vTaskSuspend(GameScreen);
                     }
-                    if (DemoTask2) {
-                    	vTaskSuspend(DemoTask2);
+                    if (HighscoreScreen) {
+                    	vTaskSuspend(HighscoreScreen);
                     }
-                    if (DemoTask1) {
-                        vTaskResume(DemoTask1);
+                    if (MainMenu) {
+                        vTaskResume(MainMenu);
                     }
                     break;
                 case STATE_TWO:
-                    if (DemoTask1) {
-                        vTaskSuspend(DemoTask1);
+                    if (MainMenu) {
+                        vTaskSuspend(MainMenu);
                     }
-                    if (DemoTask2) {
-                    	vTaskSuspend(DemoTask2);
+                    if (HighscoreScreen) {
+                    	vTaskSuspend(HighscoreScreen);
                     }
-                    if (DemoTask3) {
-                        vTaskResume(DemoTask3);
+                    if (GameScreen) {
+                        vTaskResume(GameScreen);
                     }
                     break;
                 case STATE_THREE:
-                	if (DemoTask1) {
-                		vTaskSuspend(DemoTask1);
+                	if (MainMenu) {
+                		vTaskSuspend(MainMenu);
                 	}
-                	if (DemoTask2) {
-                		vTaskResume(DemoTask2);
+                	if (HighscoreScreen) {
+                		vTaskResume(HighscoreScreen);
                 	}
-                	if (DemoTask3) {
-                		vTaskSuspend(DemoTask3);
+                	if (GameScreen) {
+                		vTaskSuspend(GameScreen);
                 	}
                 	break;
                 default:
@@ -595,66 +599,6 @@ void xGetButtonInput(void)
     	}
     }
 }
-
-/**
-#define FPS_AVERAGE_COUNT 50
-#define FPS_FONT "IBMPlexSans-Bold.ttf"
-
-void vDrawFPS(void)
-{
-    static unsigned int periods[FPS_AVERAGE_COUNT] = { 0 };
-    static unsigned int periods_total = 0;
-    static unsigned int index = 0;
-    static unsigned int average_count = 0;
-    static TickType_t xLastWakeTime = 0, prevWakeTime = 0;
-    static char str[10] = { 0 };
-    static int text_width;
-    int fps = 0;
-    font_handle_t cur_font = tumFontGetCurFontHandle();
-
-    xLastWakeTime = xTaskGetTickCount();
-
-    if (prevWakeTime != xLastWakeTime) {
-        periods[index] =
-            configTICK_RATE_HZ / (xLastWakeTime - prevWakeTime);
-        prevWakeTime = xLastWakeTime;
-    }
-    else {
-        periods[index] = 0;
-    }
-
-    periods_total += periods[index];
-
-    if (index == (FPS_AVERAGE_COUNT - 1)) {
-        index = 0;
-    }
-    else {
-        index++;
-    }
-
-    if (average_count < FPS_AVERAGE_COUNT) {
-        average_count++;
-    }
-    else {
-        periods_total -= periods[index];
-    }
-
-    fps = periods_total / average_count;
-
-    tumFontSelectFontFromName(FPS_FONT);
-
-    sprintf(str, "FPS: %2d", fps);
-
-    if (!tumGetTextSize((char *)str, &text_width, NULL))
-        checkDraw(tumDrawText(str, SCREEN_WIDTH - text_width - 10,
-                              SCREEN_HEIGHT - DEFAULT_FONT_SIZE * 1.5,
-                              Skyblue),
-                  __FUNCTION__);
-
-    tumFontSelectFontFromHandle(cur_font);
-    tumFontPutFontHandle(cur_font);
-}
-*/
 
 /**
  * Method: Drawing the Setting screen
@@ -1038,7 +982,6 @@ void vDrawLogo(int mousePosX, int mousePosY){
 			}
 			else{
 				checkDraw(tumDrawLoadedImage(logo_image,SCREEN_WIDTH-10-image_width, 10),__FUNCTION__);
-				//checkDraw(tumDrawLoadedImage(backSpace_image,462,220),__FUNCTION__);
 			}
 		}
 	}
@@ -1104,9 +1047,6 @@ void vDrawButtonText(void)
 static int vCheckStateInput(void)
 {
     if (xSemaphoreTake(buttons.lock, 0) == pdTRUE) {
-    	//STATECHANGE Zeile 820, 821 Auskommentieren und 818,819 Einkommentieren
-    	//if (buttons.buttons[KEYCODE(C)]) {
-        //    buttons.buttons[KEYCODE(C)] = 0;
     	if(currentState==1){
     		currentState=0;
             if (StateQueue) {
@@ -1115,9 +1055,6 @@ static int vCheckStateInput(void)
                 return -1;
             }
         }
-    	//STATECHANGE Zeile 831,832 Auskommentieren und 829, 830 Einkommentieren
-        //if (buttons.buttons[KEYCODE(X)]) {
-        //	buttons.buttons[KEYCODE(X)] = 0;
     	if(currentState==-1){
     		currentState=0;
         	if (StateQueue) {
@@ -1138,19 +1075,16 @@ static int vCheckStateInput(void)
  */
 void refresh()
 {
+	//clear Color Array only for divide and Conquer
+		//colorArray();
 	//black background
 	checkDraw(tumDrawClear(Black), __FUNCTION__);
-	//clear Color Array
-	colorArray();
 	//HUD objects top left
 	static char str[100] = { 0 };
 	if(showDevelopmentHUD){
 		vDrawButtonText();
-		//HUD position of food
-		//sprintf(str,"X: %d, Y: %d",x,y);
-		//checkDraw(tumDrawText(str,200,DEFAULT_FONT_SIZE * 0.5, White),__FUNCTION__);
-	}else{
-
+		sprintf(str,"X: %d, Y: %d",food1X, food1Y);
+		checkDraw(tumDrawText(str,170, DEFAULT_FONT_SIZE * 2, White),__FUNCTION__);
 	}
 	//HUD Size of snake1
 	sprintf(str,"%s size: %d",p1Name,p1Size);
@@ -1183,7 +1117,6 @@ void refresh()
 			level6(100,100,500,400,wallBorder,fieldArray);
 		}
 	}
-	//drawWall(100,100,500,400);
 	//Start Timer after first Movement of snake1 and show on HUD
 	if(startClock){
 			seconds = (clock()-start_t)/CLOCKS_PER_SEC;
@@ -1194,11 +1127,12 @@ void refresh()
 	checkDraw(tumDrawText(str,260,15, White),__FUNCTION__);
 }
 
-/*
+
+//OLD CODE FOODSPAWN Randome/Divide and Conquer
+/**
  * Methode: Divide and Conquer return possible value of FoodElement
  * Parameter: snake1, check from position (x1,y1) until (x2,y2)
  * Return: Possible Possition for foodElement
- */
 int checkPosition(node* snake1,int x1, int y1,int x2, int y2){
 	if(x2==x1+10 && y2==y1+10){
 		if(checkColor(x1,y1,Black)){
@@ -1216,14 +1150,10 @@ int checkPosition(node* snake1,int x1, int y1,int x2, int y2){
 		return checkPosition(snake1,x1,y1,((x2-x1)/20)*10+x1,((y2-y1)/20)*10+y1)+checkPosition(snake1,((x2-x1)/20)*10+x1,y1,x2,((y2-y1)/20)*10+y1)+checkPosition(snake1,x1,((y2-y1)/20)*10+y1,((x2-x1)/20)*10+x1,y2)+checkPosition(snake1,((x2-x1)/20)*10+x1,((y2-y1)/20)*10+y1,x2,y2);
 	}
 }
-
-/*
  * Methode: Divide and Conquer return array with possible Position
  * Parameter: snake1, check from position (x1,y1) until (x2,y2)
- */
 void check(node* snake1,int x1, int y1,int x2, int y2, position * array[]){
 	if(x2==x1+10 && y2==y1+10){
-        //printf("CheckColor at %5d %5d with size %5d \n", x1, y1, p1Size);
 		if(checkColor(x1,y1,Black)){
 			position * p = newPosition(x1,y1);
 			array[foodPointer]=p;
@@ -1250,9 +1180,6 @@ void check(node* snake1,int x1, int y1,int x2, int y2, position * array[]){
 		return;
 	}
 }
-
-//OLD CODE
-/**
  * Method: Place FoodElement on Randome Position
  * Parameter: snake1 is the List from all Position of the snake1
  *
@@ -1382,7 +1309,6 @@ void randomeFood(node* snake1, node* snake2){
 }
 */
 
-
 /**
  * Method: Write a note on snake if size increase or decrease
  * Parameter: increase is the value which should be shown on the screen
@@ -1400,7 +1326,6 @@ void writePlusSize(int increase, int player) {
     }
     plusSizeWrite = true;
     plusSizeIncrease = increase;
-    //plusSizeCharArr[100] = { 0 };
     if(increase>0) {
         sprintf(plusSizeCharArr, "+%d", increase);
         plusSizeWriteGreen = true;
@@ -1416,8 +1341,6 @@ void writePlusSize(int increase, int player) {
  * Method: Show Infoscreen when Button 'I' is pressed
  */
 void infoscreen() {
-    //printf("Infoscrren called\n");
-
     //check if I is not pressed
 	if(!infosPressed){
 		if(buttons.buttons[KEYCODE(I)]){
@@ -1459,18 +1382,6 @@ void pause(){
 		static char str[100] = { 0 };
 		sprintf(str,"PAUSE");
 		checkDraw(tumDrawText(str,250,75, Red),__FUNCTION__);
-        /* Testfunction for fieldArray
-        if(buttons.buttons[KEYCODE(M)]) {
-            for(int i=0;i<39;i++){
-                for(int j=0;j<29;j++){
-                    if(fieldArray[i][j]==true) {
-                        printf("fieldArray Pos = (%d,%d) \n", (i+11)*10, (j+11)*10);
-                    }
-                }
-            }
-            buttons.buttons[KEYCODE(M)] = 0;       
-        }
-        */
 
 		//Check Button P is pressed
 		if(buttons.buttons[KEYCODE(P)]){
@@ -1623,7 +1534,6 @@ void KILong(){
 void KISuperLong(){
     if(initial == 1) {
         frameTicks = 1;
-        //printf("initial ist %d \n", initial);
         turnx = 490;
         turny = 110;
         KIState = 0;
@@ -1645,7 +1555,6 @@ void KISuperLong(){
     }
     else if(KIState == 1) {
         if(p1X == turnx && p1Y == turny){
-            //printf("KIState ist %d und turx ist %d und turny ist %d \n", KIState, turnx, turny);
             buttons.buttons[KEYCODE(W)]=0;
             buttons.buttons[KEYCODE(A)]=0;
             buttons.buttons[KEYCODE(S)]=1;
@@ -1711,16 +1620,12 @@ void powerUps() {
     if(!disableSpawn){
         
         //inverse Control
-        //printf("InverseExist: %d",inverseExists);
         if(!inverseExists && initial == 0 && multiplayer){
-			//printf("Hallo\n");
 			if(rand()%5 == 2) {
 				inverseExists = 1;
-				//printf("Warum\n");
 				position * freeField = getRandomFreeField();
 				inverseX = arrayPosToCoords(freeField -> x);
 				inverseY = arrayPosToCoords(freeField -> y);
-				//printf("(%d,%d)\n",inverseX,inverseY);
 				fieldArray[freeField -> x] [freeField -> y] = 14;
 			}
 		}
@@ -1804,7 +1709,6 @@ void powerUps() {
  * Return: updated list (node) from snake1
  */
 node * superFoodFound(int player, node * snake) {
-    //printf("superFoodFound\n");
     writePlusSize(2, player);
     
     position * newPiece1 = newPosition(snake->tail->data->x,snake->tail->data->y);
@@ -1824,7 +1728,6 @@ node * superFoodFound(int player, node * snake) {
  * Return: updated list (node) from snake2
  */
 node * superFoodFound2(int player, node * snake) {
-    //printf("superFoodFound\n");
     writePlusSize(2, player);
 
     position * newPiece1 = newPosition(snake->tail->data->x,snake->tail->data->y);
@@ -1944,8 +1847,8 @@ void reset(){
 	buttons.buttons[KEYCODE(A)]=0;
 	buttons.buttons[KEYCODE(S)]=0;
 	buttons.buttons[KEYCODE(D)]=0;
-	p1NextDirection=NULL;
-	p1Direction=NULL;
+	p1NextDirection='0';
+	p1Direction='0';
 	p1X=190;
 	p1Y=190;
 	p1Size=1;
@@ -1969,8 +1872,8 @@ void reset(){
 		buttons.buttons[KEYCODE(DOWN)]=0;
 		buttons.buttons[KEYCODE(LEFT)]=0;
 		buttons.buttons[KEYCODE(RIGHT)]=0;
-		p2NextDirection=NULL;
-		p2Direction=NULL;
+		p2NextDirection='0';
+		p2Direction='0';
 		p2X=350;
 		p2Y=190;
 		p2Size=1;
@@ -2115,8 +2018,6 @@ void gameOverDrawLogo(int mousePosX, int mousePosY){
 		if(mousePosX >= 10 && mousePosX <= 60 && mousePosY >= 10 && mousePosY <= 60){
 			checkDraw(tumDrawLoadedImage(home_image2, 10, 10),__FUNCTION__);
 			if(tumEventGetMouseLeft()){
-				//STATECHANGE Zeile 3574 Auskommentieren und 3573 Einkommentieren
-				//buttons.buttons[KEYCODE(C)]=1;
 				initialStop=1;
 				initial=1;
 				//Reset fieldArray
@@ -2147,7 +2048,6 @@ void gameOverDrawLogo(int mousePosX, int mousePosY){
 				p2X = arrayPosToCoords(randomStart -> x);
 				p2Y = arrayPosToCoords(randomStart -> y);
 
-				//position * p11 = newPosition(p1X,p1Y);
 				position * p21 = newPosition(p1X,p1Y);
 				snake1 = addAsFirst(snake1,p21);
 				position * p31 = newPosition(p1X,p1Y);
@@ -2156,7 +2056,6 @@ void gameOverDrawLogo(int mousePosX, int mousePosY){
 
 				//Create snake2 List with 3 Elements
 				if(multiplayer){
-					//position * p12 = newPosition(p1X,p1Y);
 					position * p22 = newPosition(p1X,p1Y);
 					snake2 = addAsFirst(snake2,p22);
 					position * p32 = newPosition(p1X,p1Y);
@@ -2203,7 +2102,7 @@ void checkGameOver() {
         //Create Lost Element on Screen
         static char str[100] = { 0 };
         if(!multiplayer) {
-            sprintf(str,p1Name);
+            sprintf(str, "%s",p1Name);
             strcat(str," LOST");
         }
         else {
@@ -2211,22 +2110,20 @@ void checkGameOver() {
                 sprintf(str,"Game Over");
             }
             else if(winnerPlayer == 1) {
-                sprintf(str,p1Name);
+                sprintf(str, "%s",p1Name);
                 strcat(str," WON");
             }
             else {
-                sprintf(str,p2Name);
+                sprintf(str,"%s",p2Name);
                 strcat(str," WON");
             }
         }
         disableSpawn=1;
 		if(!update){
 			update = 1;
-			//printf("UPDATE\n");
 			updateHighScore();
 		}
 		gameLost=true;
-		//printf("1");
         gameOverScreen();
         checkDraw(tumDrawText(str,250,75, Red),__FUNCTION__);
         //Buttons
@@ -2237,15 +2134,6 @@ void checkGameOver() {
         	checkDraw(tumDrawText(str1,115,115, Grey),__FUNCTION__);
         	//Button Point Clicked
         	if(tumEventGetMouseLeft()){
-
-        		/**
-        		reset();
-        		animateLevelDesign=0;
-        		initial=0;
-        		refresh();
-        		gameLost=false;
-				*/
-
         		initialStop=1;
         		initial=1;
         		//Reset fieldArray
@@ -2254,7 +2142,6 @@ void checkGameOver() {
         				fieldArray[i][j]=0;
         			}
         		}
-
         		//Reset Snake1 Tail
         		while(p1Size>-1){
         			removeLast(snake1);
@@ -2281,7 +2168,6 @@ void checkGameOver() {
         		p2X = arrayPosToCoords(randomStart -> x);
         		p2Y = arrayPosToCoords(randomStart -> y);
 
-        		//position * p11 = newPosition(p1X,p1Y);
         		position * p21 = newPosition(p1X,p1Y);
         		snake1 = addAsFirst(snake1,p21);
         		position * p31 = newPosition(p1X,p1Y);
@@ -2290,7 +2176,6 @@ void checkGameOver() {
 
         		//Create snake2 List with 3 Elements
         		if(multiplayer){
-        			//position * p12 = newPosition(p1X,p1Y);
         			position * p22 = newPosition(p1X,p1Y);
         			snake2 = addAsFirst(snake2,p22);
         			position * p32 = newPosition(p1X,p1Y);
@@ -2304,9 +2189,6 @@ void checkGameOver() {
         		animateLevelDesign=0;
         		drawlevel=0;
         		refresh();
-
-
-
         	}
         }
         else{
@@ -2322,8 +2204,6 @@ void checkGameOver() {
         	checkDraw(tumDrawText(str1,430,115, Grey),__FUNCTION__);
         	//Button Point Clicked
         	if(tumEventGetMouseLeft()){
-        		//STATECHANGE Zeile 1742 Auskommentieren und 1741 Einkommentieren
-        		//buttons.buttons[KEYCODE(C)]=1;
         		currentState++;
         	}
         }
@@ -2340,16 +2220,15 @@ void checkGameOver() {
         //Create Winner is... Element on Screen
         static char str[100] = { 0 };
         if(winnerPlayer == 1) {
-            sprintf(str, p1Name);
+            sprintf(str, "%s", p1Name);
         }
         else {
             sprintf(str, "2");
         }
-        sprintf(str, p2Name);
+        sprintf(str, "%s", p2Name);
         disableSpawn=1;
         if(!update){
 			update = 1;
-			//printf("UPDATE\n");
 			updateHighScore();
 		}
         gameLost=true;
@@ -2383,7 +2262,6 @@ void incrementSpeed() {
  */
 void playerOneGetNextDirection(){
 	if(inverseControlOne > 0){
-		//printf("ONE: %d\n",inverseControlOne);
 		if(buttons.buttons[KEYCODE(W)] && p1Direction != 'U'){
 			p1NextDirection = 'D';
 		}
@@ -2415,7 +2293,6 @@ void playerOneGetNextDirection(){
 		}
 	}
 	if(buttons.buttons[SDL_SCANCODE_SPACE] && !p1PowerUpButtonPressed) {
-        //printf("Space pressed");
         p1PowerUpButtonPressed = true;
     }
 }
@@ -2425,7 +2302,6 @@ void playerOneGetNextDirection(){
  */
 void playerTwoGetNextDirection(){
 	if(inverseControlTwo > 0){
-		//printf("TWO: %d\n",inverseControlTwo);
 		if(buttons.buttons[KEYCODE(UP)] && p2Direction != 'U'){
 			p2NextDirection = 'D';
 		}
@@ -2470,8 +2346,6 @@ void collisionDetection(node * snake1, node * snake2) {
     tempY = coordsToArrayPos(p1Y);
     fieldValue = fieldArray[tempX][tempY];
 
-    //printf("fieldValue = %d\n", fieldValue);
-
     if(fieldValue == 0) {
         //Field is empty, nothing happens
     }
@@ -2499,8 +2373,6 @@ void collisionDetection(node * snake1, node * snake2) {
     }
     else if(fieldValue == 10) {
         //player 1 hit foodelement
-        //TODO Implement Foodelement found, delete old detection of found food
-
         snake1 = foodFound(1, snake1);
     }
     else if(fieldValue == 11) {
@@ -2550,9 +2422,7 @@ void collisionDetection(node * snake1, node * snake2) {
             }
         }
         else if(fieldValue == 10) {
-            //player 1 hit foodelement
-            //TODO Implement Foodelement found, delete old detection of found food
-
+            //player 2 hit foodelement
             snake2 = foodFound2(2, snake2);
         }
         else if(fieldValue == 11) {
@@ -2582,9 +2452,7 @@ void collisionDetection(node * snake1, node * snake2) {
  * Parameter: snake1 is snake from player1, snake2 is snake from player2
  */
 void backToMenu(node * snake1, node * snake2) {
-	//STATECHANGE Zeile 2160 Auskommentieren und 2159 Einkommentieren
-	//if(buttons.buttons[KEYCODE(X)]==1 || buttons.buttons[KEYCODE(C)]==1){
-     if(currentState==1){
+	if(currentState==1){
 		initialStop=1;
         initial=1;
         //Reset fieldArray
@@ -2610,7 +2478,6 @@ void backToMenu(node * snake1, node * snake2) {
         parameterReset();
         reset();
         //Create snake1 List with 3 Elements
-        //position * p11 = newPosition(p1X,p1Y);
         position * p21 = newPosition(p1X,p1Y);
         snake1 = addAsFirst(snake1,p21);
         position * p31 = newPosition(p1X,p1Y);
@@ -2618,7 +2485,6 @@ void backToMenu(node * snake1, node * snake2) {
 
         //Create snake2 List with 3 Elements
         if(multiplayer){
-            //position * p12 = newPosition(p1X,p1Y);
             position * p22 = newPosition(p1X,p1Y);
             snake2 = addAsFirst(snake2,p22);
             position * p32 = newPosition(p1X,p1Y);
@@ -2668,8 +2534,6 @@ void drawBoard(node * snake1, node * snake2) {
         drawPlayer(snake2, 2);
     }
 
-    //printf("food1X = %d, food1Y = %d\n", food1X, food1Y);
-    //printf("food2X = %d, food2Y = %d\n", food2X, food2Y);
     //Draw normalFood
     checkDraw(tumDrawFilledBox(food1X,food1Y, 5, 5, Green), __FUNCTION__);
     if(multiplayer) {
@@ -2703,7 +2567,6 @@ void drawBoard(node * snake1, node * snake2) {
 	}
 
     //A Little Note is drawn when the snake eats something.
-    //TODO Check for free space to write near head with fieldArray
     if(plusSizeWrite){
         if(plusSizeWriteGreen) {
             checkDraw(tumDrawText(plusSizeCharArr,plusSizeX-20,plusSizeY-20, Green),__FUNCTION__);
@@ -2801,7 +2664,6 @@ void drawBoard(node * snake1, node * snake2) {
     }
 
     if(inverseControlOne > 0){
-		//printf("ONE: %d\n",inverseControlOne);
         static char str[100] = { 0 };
         sprintf(str,"Counter :");
         checkDraw(tumDrawText(str, 5, 160, White),__FUNCTION__);
@@ -2810,7 +2672,6 @@ void drawBoard(node * snake1, node * snake2) {
     }
 
     if(inverseControlTwo > 0){
-		//printf("TWO: %d\n",inverseControlTwo);
 		static char str[100] = { 0 };
         sprintf(str,"Counter :");
         checkDraw(tumDrawText(str, 515, 160, White),__FUNCTION__);
@@ -2823,21 +2684,15 @@ void drawBoard(node * snake1, node * snake2) {
  * Method: Start snake1 Screen and the snake1 programm
  * Parameter: ? (something for the RTOS Emulator)
  */
-void vDemoTask3(void *pvParameters)
+void vGameScreen(void *pvParameters)
 {
-	//printf("Before \n");
-	//Create snake1 List with 3 Elements
-    //printf("vDemoTask3\n");
-    
     //rand() always gets the same results in the beginning, adding a seed for the first actual call
     int mx = tumEventGetMouseX();
     int my = tumEventGetMouseY();
     int randomSeed = mx;
     randomSeed = randomSeed * my;
     randomSeed = randomSeed % 100;
-    //printf("discarded %d randomFields\n", randomSeed);
     while(randomSeed > 0) {
-        //position * discard = getRandomFreeField();
         randomSeed--;
     }
 
@@ -2845,7 +2700,6 @@ void vDemoTask3(void *pvParameters)
     	randomStart = getRandomFreeField();
     	p1X = arrayPosToCoords(randomStart -> x);
     	p1Y = arrayPosToCoords(randomStart -> y);
-    	//printf("randompos are %d, %d\n", p1X, p1Y);
 
     	//Random position for player Two
     	randomStart = getRandomFreeField();
@@ -2856,13 +2710,10 @@ void vDemoTask3(void *pvParameters)
     	fieldArray[coordsToArrayPos(p1X)][coordsToArrayPos(p1Y)] = 1;
     	position * p11 = newPosition(p1X,p1Y);
     	snake1 = createLinkedList(p11);
-    	//printf("First Element add \n");
     	position * p21 = newPosition(p1X,p1Y);
     	snake1 = addAsFirst(snake1,p21);
-    	//printf("Second Element add \n");
     	position * p31 = newPosition(p1X,p1Y);
     	snake1 = addAsFirst(snake1,p31);
-    	//printf("Third Element add \n");
 
     	if(multiplayer){
     		fieldArray[coordsToArrayPos(p2X)][coordsToArrayPos(p2Y)] = 2;
@@ -2877,11 +2728,7 @@ void vDemoTask3(void *pvParameters)
     	p1Ready = false;
     	p2Ready = false;
 
-    
-    
-
-    //printf("Head: %d, %d\n",snake1->head->data->x, snake1->head->data->y);
-	while(1) {
+ 	while(1) {
 		if(DrawSignal) {
 			if(xSemaphoreTake(DrawSignal, portMAX_DELAY) ==
 				pdTRUE) {
@@ -2893,12 +2740,6 @@ void vDemoTask3(void *pvParameters)
                             //Level 1 has no inner walls, do nothing
                         }
                         else if (level == 2) {
-                            //printf("BLAAA\n");
-                            //printf("y= %d, %d <=x<= %d\n", coordsToArrayPos(200), coordsToArrayPos(105), coordsToArrayPos(255));
-                            //printf("y=%d, %d<=x<=%d\n", coordsToArrayPos(200), coordsToArrayPos(345), coordsToArrayPos(500));
-                            //printf("y=%d, %d<=x<=%d\n", coordsToArrayPos(300), coordsToArrayPos(105), coordsToArrayPos(255));
-                            //printf("y=%d, %d<=x<=%d\n", coordsToArrayPos(300), coordsToArrayPos(345), coordsToArrayPos(500));
-                            
                             for(int i=0;i<15;i++){
                                 fieldArray[i][9] = 3;
                                 fieldArray[i][19] = 3;
@@ -2907,14 +2748,6 @@ void vDemoTask3(void *pvParameters)
                             }
                         }
                         else if(level == 3) {
-                            
-                            //printf("y= %d, %d <=x<= %d\n", coordsToArrayPos(200), coordsToArrayPos(165), coordsToArrayPos(435));
-                            //printf("y=%d, %d<=x<=%d\n", coordsToArrayPos(300), coordsToArrayPos(165), coordsToArrayPos(435));
-                            //printf("x< %d, y< %d\n", coordsToArrayPos(170), coordsToArrayPos(165));
-                            //printf("x< %d, y> %d\n", coordsToArrayPos(170), coordsToArrayPos(335));
-                            //printf("x> %d, y< %d\n", coordsToArrayPos(435), coordsToArrayPos(165));
-                            //printf("x> %d, y> %d\n", coordsToArrayPos(435), coordsToArrayPos(335));
-                            
                             for(int i=0; i<27; i++) {
                                 fieldArray[i+6][9] = 3;
                                 fieldArray[i+6][19] = 3;
@@ -2925,7 +2758,6 @@ void vDemoTask3(void *pvParameters)
                                 fieldArray[i%6][i/6+23] = 3;
                                 fieldArray[i%6+33][i/6+23] = 3;
                             }
-                            
                         }
                         else if(level == 4){
                         	for(int i=4;i<15;i++){
@@ -2942,19 +2774,11 @@ void vDemoTask3(void *pvParameters)
                         	}
                         }
                         else if(level == 5){
-                            //printf("x= %d, y= %d\n", coordsToArrayPos(300), coordsToArrayPos(110));
-                            //printf("x= %d, y= %d\n", coordsToArrayPos(300), coordsToArrayPos(250));
-                            //printf("x= %d, y= %d\n", coordsToArrayPos(300), coordsToArrayPos(390));
-                            //printf("x= %d, y= %d\n", coordsToArrayPos(490), coordsToArrayPos(250));
-                            //printf("x= %d, y= %d\n", coordsToArrayPos(110), coordsToArrayPos(250));
-
-                            for(int i = 0; i<=28; i++) {
+                             for(int i = 0; i<=28; i++) {
                                 fieldArray[9][i] = 3;
                                 fieldArray[19][i] = 3;
                                 fieldArray[29][i] = 3;
                             }
-
-
                             fieldArray[4][6] = 20;
                             fieldArray[4][22] = 20;
                             fieldArray[14][6] = 20;
@@ -2963,7 +2787,6 @@ void vDemoTask3(void *pvParameters)
                             fieldArray[24][22] = 20;
                             fieldArray[34][6] = 20;
                             fieldArray[34][22] = 20;
-                            
                         }
                         else if(level==6){
                             for(int i = 0; i<50; i++) {
@@ -2971,12 +2794,9 @@ void vDemoTask3(void *pvParameters)
                                 addInitfield(randomPos->x,randomPos->y,i);
                                 fieldArray[randomPos -> x][randomPos -> y] = 3;
                             }
-                            
                         }
-                        
                         wallsInitialized = true;
                     }
-
                     if(!foodCreated) {
                         createRandomFood();
                         if(multiplayer) {
@@ -2984,7 +2804,6 @@ void vDemoTask3(void *pvParameters)
                         }
                         foodCreated = true;
                     }
-
                     if(animateLevelDesign){
                     	if(frame==4){
                     		animateLevel=1;
@@ -2993,7 +2812,6 @@ void vDemoTask3(void *pvParameters)
                     		initLevel(level,wallBorder,fieldArray);
                     	}
                     }
-
 					if(!multiplayer && (buttons.buttons[KEYCODE(W)] || buttons.buttons[KEYCODE(A)] || buttons.buttons[KEYCODE(S)] || buttons.buttons[KEYCODE(D)])){
 						start_t = clock();
 						startClock=1;
@@ -3016,17 +2834,13 @@ void vDemoTask3(void *pvParameters)
 					}
 				}
 				
-				//snake1 played by Computer
+				//To Activate KI Comment Out only Singleplayer snake1 played by Computer
                 //KI();
                 //KILong();
                 //KISuperLong();
                 
-
 				//Input of Keyboard
 				xGetButtonInput();
-
-				//vDrawStaticItems();
-				//vDrawCave(tumEventGetMouseLeft());
                 
 				//Check Pause Button is activated
                 pause();
@@ -3040,8 +2854,7 @@ void vDemoTask3(void *pvParameters)
                 //Check Game Over criteria
                checkGameOver();
                 
-                //Check next direction of Playe
-                //Check also if PowerUpButton is Pressed
+                //Check next direction of Player and if PowerUpButtons is Pressed
                 playerOneGetNextDirection();
                 if(multiplayer) {
                     playerTwoGetNextDirection();
@@ -3055,8 +2868,6 @@ void vDemoTask3(void *pvParameters)
                  */
                 if(frame == frameTicks) {
                     initialStop=0;
-                    //playerOneGetDirection();
-                    
                     if(playerOneFrozen == 0) {
                         snake1 = playerStep(snake1, 1);
                     }
@@ -3122,9 +2933,6 @@ void vDemoTask3(void *pvParameters)
 
 				//Input eingaben von C oder P
 				vCheckStateInput();
-				if(!disableSpawn){
-				//randomeFood(snake1,snake2);
-				}
 			}
         }
     }
@@ -3138,7 +2946,6 @@ void vDemoTask3(void *pvParameters)
  */
 node * teleport(node * snake, int player) {
     if(player==1) {
-        //printf("mod test %d\n", -5%40);
         if(coordsToArrayPos(p1Y) == 6) {
             p1X = arrayPosToCoords((coordsToArrayPos(p1X) + 10) % 40);
         }
@@ -3154,6 +2961,7 @@ node * teleport(node * snake, int player) {
             p2X = (p2X - 100) % 400;
         }
     }
+    return snake;
 }
 
 /**
@@ -3267,7 +3075,6 @@ node * playerStep(node * snake, int player){
     
     if(wallBorder == 0){
         if(tempX<105 || tempX>495 || tempY<105 || tempY>395){
-            //printf("HIT\n");
             if(!multiplayer) {
                 gameLost = true;
             }
@@ -3300,9 +3107,6 @@ node * playerStep(node * snake, int player){
     
     position * sec = newPosition(tempX, tempY);
     snake = addAsFirst(snake, sec);
-    if(levelCollision(tempX,tempY)){
-    	//gameLost=true;
-    }
     
     if(player == 1) {
         p1X = tempX;
@@ -3580,7 +3384,7 @@ void drawKeyBoard(int mousePosX,int mousePosY,int multiplayer){
 	}else{
 		checkDraw(tumDrawFilledBox(485,140,35,35,White),__FUNCTION__);
 	}
-	
+
 	//Mid row of Keyboard
 	if(mouseOver(142,180,mousePosX,mousePosY)){
 		checkDraw(tumDrawFilledBox(142,180,35,35,Grey),__FUNCTION__);
@@ -3789,7 +3593,7 @@ void drawKeyBoard(int mousePosX,int mousePosY,int multiplayer){
 	}else{
 		checkDraw(tumDrawFilledBox(462,180,35,35,White),__FUNCTION__);
 	}
-	
+
 	//Last row of Keyboard
 	if(mouseOver(142,220,mousePosX,mousePosY)){
 		checkDraw(tumDrawLoadedImage(capsLock_hover_image,142,220),__FUNCTION__);
@@ -3934,7 +3738,7 @@ void drawKeyBoard(int mousePosX,int mousePosY,int multiplayer){
 					}
 			}
 		}
-	}else{	
+	}else{
 		checkDraw(tumDrawFilledBox(382,220,35,35,White),__FUNCTION__);
 	}
 	if(mouseOver(422,220,mousePosX,mousePosY)){
@@ -3970,10 +3774,10 @@ void drawKeyBoard(int mousePosX,int mousePosY,int multiplayer){
 				deleteP2Name=1;
 			}
 		}
-	}else{	
+	}else{
 		checkDraw(tumDrawLoadedImage(backSpace_image,462,220),__FUNCTION__);
 	}
-	
+
 	//KEYBOARDINPUT
 	if(buttons.buttons[KEYCODE(Q)]==1){
 				buttons.buttons[KEYCODE(Q)]=0;
@@ -4585,7 +4389,7 @@ void enterPlayerName(int mousePosX, int mousePosY){
 	sprintf(name1,"Spieler1 Name:");
 	sprintf(name2,"Spieler2 Name:");
 	sprintf(str,"Start Game");
-	
+
 	if(gameStarted){
 		checkDraw(tumDrawClear(Black), __FUNCTION__);
 		if(!multiplayer){
@@ -4609,7 +4413,7 @@ void enterPlayerName(int mousePosX, int mousePosY){
 			if(tumEventGetMouseLeft()){
 				if(mousePosX >= 275 && mousePosX <= 475 && mousePosY >= 55 && mousePosY <= 70){
 					p1Selected = 1;
-				} 
+				}
 				else if(mousePosX >= 275 && mousePosX <= 475 && mousePosY >= 105 && mousePosY <= 120){
 					p1Selected = 0;
 				}
@@ -4630,8 +4434,6 @@ void enterPlayerName(int mousePosX, int mousePosY){
 						sprintf(p2Name,"Spieler2");
 					}
 				}
-				//STATECHANGE Zeile 3426 Auskommentieren und 3425 Einkommentieren
-				//buttons.buttons[KEYCODE(C)]=1;
 				currentState++;
 			}
 		}
@@ -4647,7 +4449,7 @@ void enterPlayerName(int mousePosX, int mousePosY){
  * Method: Drawing Logo on Playername screen
  * Parameter: mousePosX position of Mouse X value, mousePosY position of Mouse Y value
  */
-void vDemoTask1DrawLogo(int mousePosX, int mousePosY){
+void vMainMenuDrawLogo(int mousePosX, int mousePosY){
 	static int image_width;
 	if((image_width = tumDrawGetLoadedImageWidth(home_image)) != -1 && tumDrawGetLoadedImageWidth(home_image2) != -1){
 		if(mousePosX >= 10 && mousePosX <= 60 && mousePosY >= 10 && mousePosY <= 60){
@@ -4669,16 +4471,15 @@ void vDemoTask1DrawLogo(int mousePosX, int mousePosY){
  * Method: Show the Main Menu
  * Parameter: ? (something for the RTOS)
  */
-void vDemoTask1(void *pvParameters)
+void vMainMenu(void *pvParameters)
 {
     while (1) {
         if (DrawSignal)
             if (xSemaphoreTake(DrawSignal, portMAX_DELAY) ==
                 pdTRUE) {
-                xGetButtonInput(); // Update global input
+                xGetButtonInput();
+                // Update global input
                 
-                
-
                 xSemaphoreTake(ScreenLock, portMAX_DELAY);
 
                 // Clear screen
@@ -4692,7 +4493,7 @@ void vDemoTask1(void *pvParameters)
 				}
 				else if(gameStarted){
 					enterPlayerName(mousePosX,mousePosY);
-					 vDemoTask1DrawLogo(mousePosX,mousePosY);
+					 vMainMenuDrawLogo(mousePosX,mousePosY);
 				}
 				else{
 					static char str1[100] = { 0 };
@@ -4760,7 +4561,6 @@ void vDemoTask1(void *pvParameters)
                         checkDraw(tumDrawText(cont1,50,140, White),__FUNCTION__);
                         checkDraw(tumDrawText(cont2,50,170, White),__FUNCTION__);
                         checkDraw(tumDrawText(cont3,50,200, White),__FUNCTION__);
-                        //checkDraw(tumDrawText(cont4,50,230, White),__FUNCTION__);
                         
                         checkDraw(tumDrawText(levelitem,50,230,White),__FUNCTION__);
                         checkDraw(tumDrawFilledBox(50, 268, 5, 5, Purple), __FUNCTION__);
@@ -4834,8 +4634,6 @@ void vDemoTask1(void *pvParameters)
                             checkDraw(tumDrawFilledBox(155,295,340,70,Black),__FUNCTION__);
                             checkDraw(tumDrawText(str3,270,320, Grey),__FUNCTION__);
                             if(tumEventGetMouseLeft()){
-                                //STATECHANGE Zeile 3532 Auskommentieren und 3531 Einkommentieren
-                                //buttons.buttons[KEYCODE(X)]=1;
                                 currentState--;
                             }
                         }
@@ -4854,13 +4652,6 @@ void vDemoTask1(void *pvParameters)
 				else{ 
 					checkDraw(tumDrawCircle(tumEventGetMouseX(), tumEventGetMouseY(), 10, White), __FUNCTION__);
 				}
-				
-                //vDrawStaticItems();
-                //vDrawCave(tumEventGetMouseLeft());
-                
-
-                // Draw FPS in lower right corner
-               //vDrawFPS();
 
                 xSemaphoreGive(ScreenLock);
 
@@ -4874,14 +4665,12 @@ void vDemoTask1(void *pvParameters)
  * Method: Drawing Logos on Top left corner
  * Parameter: mousePosX position of Mouse X value, mousePosY position of Mouse Y value
  */
-void vDemoTask2DrawLogo(int mousePosX, int mousePosY){
+void vHighscoreScreenDrawLogo(int mousePosX, int mousePosY){
 	static int image_width;
 	if((image_width = tumDrawGetLoadedImageWidth(home_image)) != -1 && tumDrawGetLoadedImageWidth(home_image2) != -1){
 		if(mousePosX >= 10 && mousePosX <= 60 && mousePosY >= 10 && mousePosY <= 60){
 			checkDraw(tumDrawLoadedImage(home_image2, 10, 10),__FUNCTION__);
 			if(tumEventGetMouseLeft()){
-				//STATECHANGE Zeile 3574 Auskommentieren und 3573 Einkommentieren
-				//buttons.buttons[KEYCODE(C)]=1;
 				currentState++;
 			}
 		}
@@ -4918,7 +4707,7 @@ int readFile(){
  * Method: Screen for Highscore
  * Parameter: ? (something for RTOS)
  */
-void vDemoTask2(void *pvParameters){
+void vHighscoreScreen(void *pvParameters){
 	checkDraw(tumDrawClear(Black), __FUNCTION__);
 	int h[10];
 	int m[10];
@@ -4942,7 +4731,7 @@ void vDemoTask2(void *pvParameters){
 	        		static char str1[100];
         			char str[100];
 
-	        		vDemoTask2DrawLogo(mousePosX,mousePosY);
+	        		vHighscoreScreenDrawLogo(mousePosX,mousePosY);
 
 	        		//First Intiailisation Reading File and printf first time on screen
 	        		if(readHighscoreFile){
@@ -5048,116 +4837,13 @@ void vDemoTask2(void *pvParameters){
 }
 
 //Not Used, Sound for Ball Collision old RTOS Emulator
+/*
 void playBallSound(void *args)
 {
     tumSoundPlaySample(a3);
 }
-
-/**
-void vDemoTask2(void *pvParameters)
-{
-    TickType_t xLastWakeTime, prevWakeTime;
-    xLastWakeTime = xTaskGetTickCount();
-    prevWakeTime = xLastWakeTime;
-
-    ball_t *my_ball = createBall(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, Black,
-                                 20, 1000, &playBallSound, NULL);
-    setBallSpeed(my_ball, 250, 250, 0, SET_BALL_SPEED_AXES);
-
-    // Left wall
-    wall_t *left_wall =
-        createWall(CAVE_X - CAVE_THICKNESS, CAVE_Y, CAVE_THICKNESS,
-                   CAVE_SIZE_Y, 0.2, Red, NULL, NULL);
-    // Right wall
-    wall_t *right_wall =
-        createWall(CAVE_X + CAVE_SIZE_X, CAVE_Y, CAVE_THICKNESS,
-                   CAVE_SIZE_Y, 0.2, Red, NULL, NULL);
-    // Top wall
-    wall_t *top_wall =
-        createWall(CAVE_X - CAVE_THICKNESS, CAVE_Y - CAVE_THICKNESS,
-                   CAVE_SIZE_X + CAVE_THICKNESS * 2, CAVE_THICKNESS,
-                   0.2, Blue, NULL, NULL);
-    // Bottom wall
-    wall_t *bottom_wall =
-        createWall(CAVE_X - CAVE_THICKNESS, CAVE_Y + CAVE_SIZE_Y,
-                   CAVE_SIZE_X + CAVE_THICKNESS * 2, CAVE_THICKNESS,
-                   0.2, Blue, NULL, NULL);
-    unsigned char collisions = 0;
-
-    printf("Task 1 init'd\n");
-
-    while (1) {
-        if (DrawSignal)
-            if (xSemaphoreTake(DrawSignal, portMAX_DELAY) ==
-                pdTRUE) {
-                xLastWakeTime = xTaskGetTickCount();
-
-                xGetButtonInput(); // Update global button data
-
-                xSemaphoreTake(ScreenLock, portMAX_DELAY);
-                // Clear screen
-                checkDraw(tumDrawClear(White), __FUNCTION__);
-
-                //vDrawStaticItems();
-
-                // Draw the walls
-                checkDraw(tumDrawFilledBox(
-                              left_wall->x1, left_wall->y1,
-                              left_wall->w, left_wall->h,
-                              left_wall->colour),
-                          __FUNCTION__);
-                checkDraw(tumDrawFilledBox(right_wall->x1,
-                                           right_wall->y1,
-                                           right_wall->w,
-                                           right_wall->h,
-                                           right_wall->colour),
-                          __FUNCTION__);
-                checkDraw(tumDrawFilledBox(
-                              top_wall->x1, top_wall->y1,
-                              top_wall->w, top_wall->h,
-                              top_wall->colour),
-                          __FUNCTION__);
-                checkDraw(tumDrawFilledBox(bottom_wall->x1,
-                                           bottom_wall->y1,
-                                           bottom_wall->w,
-                                           bottom_wall->h,
-                                           bottom_wall->colour),
-                          __FUNCTION__);
-
-                // Check if ball has made a collision
-                collisions = checkBallCollisions(my_ball, NULL,
-                                                 NULL);
-                if (collisions) {
-                    printf("Collision\n");
-                }
-
-                // Update the balls position now that possible collisions have
-                // updated its speeds
-                updateBallPosition(
-                    my_ball, xLastWakeTime - prevWakeTime);
-
-                // Draw the ball
-                checkDraw(tumDrawCircle(my_ball->x, my_ball->y,
-                                        my_ball->radius,
-                                        my_ball->colour),
-                          __FUNCTION__);
-
-                // Draw FPS in lower right corner
-                //vDrawFPS();
-
-                xSemaphoreGive(ScreenLock);
-
-                // Check for state change
-                vCheckStateInput();
-
-                // Keep track of when task last ran so that you know how many ticks
-                //(in our case miliseconds) have passed so that the balls position
-                // can be updated appropriatley
-                prevWakeTime = xLastWakeTime;
-            }
-    }
-}
 */
+
 
 #define PRINT_TASK_ERROR(task) PRINT_ERROR("Failed to print task ##task");
 
@@ -5191,14 +4877,6 @@ int main(int argc, char *argv[])
         PRINT_ERROR("Failed to initialize events");
         goto err_init_events;
     }
-
-    //Initialize Sound
-    /*
-    if (tumSoundInit(bin_folder_path)) {
-        PRINT_ERROR("Failed to initialize audio");
-        goto err_init_audio;
-    }
-    */
 
     //load images
     logo_image = tumDrawLoadImage(LOGO_FILENAME);
@@ -5254,26 +4932,26 @@ int main(int argc, char *argv[])
     }
 
     /** Demo Tasks */
-    if (xTaskCreate(vDemoTask1, "DemoTask1", mainGENERIC_STACK_SIZE * 2,
-                    NULL, mainGENERIC_PRIORITY, &DemoTask1) != pdPASS) {
-        PRINT_TASK_ERROR("DemoTask1");
+    if (xTaskCreate(vMainMenu, "MainMenu", mainGENERIC_STACK_SIZE * 2,
+                    NULL, mainGENERIC_PRIORITY, &MainMenu) != pdPASS) {
+        PRINT_TASK_ERROR("MainMenu");
         goto err_demotask1;
     }
-    if (xTaskCreate(vDemoTask3, "DemoTask3", mainGENERIC_STACK_SIZE * 2,
-                    NULL, mainGENERIC_PRIORITY, &DemoTask3) != pdPASS) {
-        PRINT_TASK_ERROR("DemoTask3");
+    if (xTaskCreate(vGameScreen, "GameScreen", mainGENERIC_STACK_SIZE * 2,
+                    NULL, mainGENERIC_PRIORITY, &GameScreen) != pdPASS) {
+        PRINT_TASK_ERROR("GameScreen");
         goto err_demotask3;
     }
-    if (xTaskCreate(vDemoTask2, "DemoTask2", mainGENERIC_STACK_SIZE * 2,
-    				NULL, mainGENERIC_PRIORITY, &DemoTask2) != pdPASS) {
-    	PRINT_TASK_ERROR("DemoTask2");
+    if (xTaskCreate(vHighscoreScreen, "HighscoreScreen", mainGENERIC_STACK_SIZE * 2,
+    				NULL, mainGENERIC_PRIORITY, &HighscoreScreen) != pdPASS) {
+    	PRINT_TASK_ERROR("HighscoreScreen");
     	goto err_demotask2;
     }
 
 
-    vTaskSuspend(DemoTask1);
-    vTaskSuspend(DemoTask2);
-    vTaskSuspend(DemoTask3);
+    vTaskSuspend(MainMenu);
+    vTaskSuspend(HighscoreScreen);
+    vTaskSuspend(GameScreen);
 
     vTaskStartScheduler();
 
@@ -5281,10 +4959,10 @@ int main(int argc, char *argv[])
 
 //Error handler
 err_demotask3:
-    vTaskDelete(DemoTask1);
+    vTaskDelete(MainMenu);
 err_demotask2:
-	vTaskDelete(DemoTask1);
-	vTaskDelete(DemoTask3);
+	vTaskDelete(MainMenu);
+	vTaskDelete(GameScreen);
 err_demotask1:
     vTaskDelete(BufferSwap);
 err_bufferswap:
@@ -5299,8 +4977,6 @@ err_draw_signal:
     vSemaphoreDelete(buttons.lock);
 err_buttons_lock:
     tumSoundExit();
-err_init_audio:
-    tumEventExit();
 err_init_events:
     tumDrawExit();
 err_init_drawing:
