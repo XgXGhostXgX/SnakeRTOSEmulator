@@ -1,0 +1,4 @@
+/home/dilsan/Schreibtisch/Universitaet/8.UniSS20/Fachprojekt/SnakeRTOSEmulator/build/CMakeFiles/rebuild_cache.dir
+/home/dilsan/Schreibtisch/Universitaet/8.UniSS20/Fachprojekt/SnakeRTOSEmulator/build/CMakeFiles/edit_cache.dir
+/home/dilsan/Schreibtisch/Universitaet/8.UniSS20/Fachprojekt/SnakeRTOSEmulator/build/CMakeFiles/commit.dir
+/home/dilsan/Schreibtisch/Universitaet/8.UniSS20/Fachprojekt/SnakeRTOSEmulator/build/CMakeFiles/FreeRTOS_Emulator.dir

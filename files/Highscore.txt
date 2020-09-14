@@ -1,0 +1,10 @@
+00:00:10 Thilaksan 50 Level1 Wall
+00:00:09 Dilsan 45 Level2 NoWall
+00:00:08 Lukas 40 Level3 NoWall
+00:00:07 Dilsan 35 Level1 Wall
+00:00:06 Thilaksan 30 Level1 NoWall
+00:00:05 Lukas 25 Level2 Wall
+00:00:04 Thilaksan 20 Level3 Wall
+00:00:03 Lukas 15 Level2 NoWall
+00:00:02 Thilaksan 10 Level2 NoWall
+00:00:12 Dilsan 5 Level1 Wall
