@@ -1,0 +1,98 @@
+% ----------------------------------------------------------------------
+%
+%        Vorlage für Abschlussarbeiten am Lehrstuhl Informatik XII
+%
+%                   http://ls12-www.cs.uni-dortmund.de
+%
+%   Für Fragen und Anregungen zur Vorlage: info@ls12.cs.uni-dortmund.de
+%
+%   Stand: 03.09.2013
+%
+% ----------------------------------------------------------------------
+
+\include{header}
+
+
+\begin{document}
+
+% Titelseite ---------------------------------------------------------
+%
+\pdfbookmark{Titelpage}{pdf:title}
+\pagenumbering{alph}
+\pagestyle{empty}
+%\selectlanguage{english}
+\include{chapter/titlepage}
+\blankpage
+
+
+% Inhaltsverzeichnis -------------------------------------------------
+%
+\pdfbookmark{Table of Content}{pdf:toc}
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+% Inhalte --------------------------------------------------------------
+%Einleitung/Motivation/What is RTOS?
+\include{chapter/introduction}
+
+\cleardoublepage
+%Game (Game description,Pictures) Thilli
+\include{chapter/chapter1}
+
+\cleardoublepage
+%Structure ("model structure") Dilsan
+\include{chapter/chapter2}
+
+\cleardoublepage
+%Game Logic Lukas
+\include{chapter/chapter3}
+
+\cleardoublepage
+%Problems and Solutions
+\include{chapter/chapter4}
+
+%\include{chapter/erklaerung.tex}
+% Anhang ---------------------------------------------------------------
+%
+\cleardoublepage
+\appendix
+
+
+\include{chapter/appendix}
+
+% Abbildungsverzeichnis -------------------------------------------------
+%
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures }
+\cleardoublepage
+
+% Algorithmenverzeichnis ------------------------------------------------
+%
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\cleardoublepage
+
+% Quellcodeverzeichnis --------------------------------------------------
+%
+\renewcommand{\lstlistlistingname}{List of Source Codes}
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{List of Source Codes}
+\cleardoublepage
+% ----------------------------------------------------------------------
+
+
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Eidesstattliche Versicherung}
+%\include{Eidesstattliche_Versicherung.pdf}
+\clearpage
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Eidesstattliche Versicherung}
+\includegraphics[trim = 20mm 20mm 20mm 10mm, clip,
+width=\textwidth]{Eidesstattliche_Versicherung.pdf}
+
+
+%\include{chapter/appendix}
+
+\end{document}
