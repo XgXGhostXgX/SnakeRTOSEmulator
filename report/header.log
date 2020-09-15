@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.1)  13 MAY 2020 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.13)  15 SEP 2020 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **header.tex
 (./header.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 10 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 14 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
@@ -317,12 +317,19 @@ File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count103
 \AM@templatesizebox=\box31
 )
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 52.
+
 Package hyperref Info: Option `colorlinks' set `false' on input line 52.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 52.
 Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 52.
 
 Package hyperref Info: Option `plainpages' set `false' on input line 52.
-
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count104
@@ -963,27 +970,144 @@ Package scrhack Info: redefining \lstlistoflistings on input line 137.
 )
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-
-! LaTeX Error: File `algorithm.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+Package tocbasic Info: setting babel extension for `loa' on input line 95.
+\@float@every@algorithm=\toks29
+\c@algorithm=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count299
+\c@ALC@line=\count300
+\c@ALC@rem=\count301
+\c@ALC@depth=\count302
+\ALC@tlm=\skip84
+\algorithmicindent=\skip85
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+\theorem@style=\toks31
+\theorem@@style=\toks32
+\theorembodyfont=\toks33
+\theoremnumbering=\toks34
+\theorempreskipamount=\skip86
+\theorempostskipamount=\skip87
+\theoremframepreskipamount=\skip88
+\theoremframepostskipamount=\skip89
+\theoreminframepreskipamount=\skip90
+\theoreminframepostskipamount=\skip91
+\theorem@preskip=\toks35
+\theorem@postskip=\toks36
+\theorem@framepreskip=\toks37
+\theorem@framepostskip=\toks38
+\theorem@inframepreskip=\toks39
+\theorem@inframepostskip=\toks40
+\theoremindent=\dimen195
+\theorem@indent=\dimen196
+\theoremrightindent=\dimen197
+\theorem@rightindent=\dimen198
+\theoremheaderfont=\toks41
+\theoremseparator=\toks42
+\theoremprework=\toks43
+\theorempostwork=\toks44
+\theoremsymbol=\toks45
+\qedsymbol=\toks46
+\theoremkeyword=\toks47
+\qedsymbol=\toks48
+\thm@topsep=\skip92
+\thm@topsepadd=\skip93
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count303
+\c@currNonectr=\count304
+\mysavskip=\skip94
+Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
+ line 1175.
+\thm@amstmpdepth=\dimen199
+\tagwidth=\dimen256
+)
+\c@currtheoremctr=\count305
+\c@endtheoremctr=\count306
+\c@theorem=\count307
+\c@currsatzctr=\count308
+\c@endsatzctr=\count309
+\c@currlemmactr=\count310
+\c@endlemmactr=\count311
+\c@currkorollarctr=\count312
+\c@endkorollarctr=\count313
+\c@currpropositionctr=\count314
+\c@endpropositionctr=\count315
+\c@currtheorem*ctr=\count316
+\c@endtheorem*ctr=\count317
+\c@theorem*=\count318
+\c@currsatz*ctr=\count319
+\c@endsatz*ctr=\count320
+\c@satz*=\count321
+\c@currlemma*ctr=\count322
+\c@endlemma*ctr=\count323
+\c@lemma*=\count324
+\c@currkorollar*ctr=\count325
+\c@endkorollar*ctr=\count326
+\c@korollar*=\count327
+\c@currproposition*ctr=\count328
+\c@endproposition*ctr=\count329
+\c@proposition*=\count330
+\c@currdefinitionctr=\count331
+\c@enddefinitionctr=\count332
+\c@currdefinition*ctr=\count333
+\c@enddefinition*ctr=\count334
+\c@definition*=\count335
+\c@currnotationctr=\count336
+\c@endnotationctr=\count337
+\c@notation=\count338
+\c@currkonventionctr=\count339
+\c@endkonventionctr=\count340
+\c@konvention=\count341
+\c@currbezeichnungctr=\count342
+\c@endbezeichnungctr=\count343
+\c@bezeichnung=\count344
+\c@currbeweisctr=\count345
+\c@endbeweisctr=\count346
+\c@beweis=\count347
+\c@currbemerkungctr=\count348
+\c@endbemerkungctr=\count349
+\c@currbeobachtungctr=\count350
+\c@endbeobachtungctr=\count351
+\c@currbeispielctr=\count352
+\c@endbeispielctr=\count353
+\c@currproblemctr=\count354
+\c@endproblemctr=\count355
+\c@problem=\count356
+\c@currbemerkung*ctr=\count357
+\c@endbemerkung*ctr=\count358
+\c@bemerkung*=\count359
+\c@currbeispiel*ctr=\count360
+\c@endbeispiel*ctr=\count361
+\c@beispiel*=\count362
+\c@currproblem*ctr=\count363
+\c@endproblem*ctr=\count364
+\c@problem*=\count365
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+))
 ! Emergency stop.
-<read *> 
-         
-l.175 \usepackage
-                 {algorithmic}^^M
-*** (cannot \read from terminal in nonstop modes)
+<*> header.tex
+              
+*** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
- 21472 strings out of 494830
- 383899 string characters out of 6177367
- 556830 words of memory out of 5000000
- 24663 multiletter control sequences out of 15000+600000
+ 22545 strings out of 494757
+ 400504 string characters out of 6175785
+ 570404 words of memory out of 5000000
+ 25729 multiletter control sequences out of 15000+600000
  530572 words of font info for 23 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 81 hyphenation exceptions out of 8191
  47i,1n,66p,10421b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.13)  15 SEP 2020 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.13)  15 SEP 2020 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -144,7 +144,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.21 {\Large
+l.22 {\Large
              \type} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -153,7 +153,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.21 {\Large \type
+l.22 {\Large \type
                   } \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -168,11 +168,55 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 {\Large \type} \\
+l.22 {\Large \type} \\
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \thesistitle 
+                             
+l.24 \textbf{\thesistitle}
+                           \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 \Autor
+            \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \Autor \\
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \submissiondate 
+                                
+l.28 \submissiondate
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 ! LaTeX Error: The font size command \normalsize is not defined:
@@ -182,14 +226,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \normalsize
+l.31 \normalsize
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (232.14964pt too wide) in paragraph at lines 16--36
+Overfull \hbox (232.14964pt too wide) in paragraph at lines 16--33
 []|  |  $[]$
  []
 
@@ -200,7 +244,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 \hspace*{\links}
+l.38 \hspace*{\links}
                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -208,7 +252,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <recently read> \firstsupervisor 
                                  
-l.46 \firstsupervisor
+l.43 \firstsupervisor
                       \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -223,7 +267,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 \firstsupervisor \\
+l.43 \firstsupervisor \\
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -232,7 +276,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 <recently read> \secondsupervisor 
                                   
-l.47 \secondsupervisor
+l.44 \secondsupervisor
                        \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -247,14 +291,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 \secondsupervisor \\
+l.44 \secondsupervisor \\
                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (207.16513pt too wide) in paragraph at lines 41--49
+Overfull \hbox (207.16513pt too wide) in paragraph at lines 38--46
 []|  [] 
  []
 
@@ -265,7 +309,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \hspace*{\links}
+l.48 \hspace*{\links}
                      
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -273,7 +317,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <recently read> \ErstLehrstuhl 
                                
-l.57 \ErstLehrstuhl
+l.54 \ErstLehrstuhl
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -282,7 +326,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (207.16513pt too wide) in paragraph at lines 51--59
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+ []
+
+
+Overfull \hbox (207.16513pt too wide) in paragraph at lines 48--56
 []|  [] 
  []
 
@@ -293,7 +342,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \end{titlepage}
+l.58 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -307,11 +356,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 20 strings out of 494757
- 305 string characters out of 6175785
+ 22 strings out of 494757
+ 330 string characters out of 6175785
  48082 words of memory out of 5000000
- 3464 multiletter control sequences out of 15000+600000
+ 3466 multiletter control sequences out of 15000+600000
  4239 words of font info for 16 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 18i,4n,12p,90b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,4n,12p,90b,190s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
