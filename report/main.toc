@@ -1,3 +1,4 @@
+\babel@toc {ngerman}{}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation und Hintergrund}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Aufbau und Umgebung der Arbeit}{1}{section.1.2}
@@ -11,9 +12,10 @@
 \contentsline {section}{\numberline {4.1}Spiel Logik - Unterkapitel 1}{11}{section.4.1}
 \contentsline {section}{\numberline {4.2}Spiel Logik - Unterkapitel 2}{12}{section.4.2}
 \contentsline {chapter}{\numberline {5}Probleme und L{\"o}sungen}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Probleme und L{\"o}sungen - Unterkapitel 1}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Probleme und L{\"o}sungen - Unterkapitel 2}{16}{section.5.2}
-\contentsline {chapter}{List of Figures }{21}{chapter*.10}
-\contentsline {chapter}{List of Algorithms}{23}{chapter*.11}
-\contentsline {chapter}{List of Source Codes}{25}{chapter*.12}
-\contentsline {chapter}{Eidesstattliche Versicherung}{27}{chapter*.12}
+\contentsline {section}{\numberline {5.1}Bewegung der Schlange}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}Elemente Erzeugen}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}Spielleistung}{15}{section.5.3}
+\contentsline {chapter}{List of Figures }{19}{chapter*.8}
+\contentsline {chapter}{List of Algorithms}{21}{chapter*.9}
+\contentsline {chapter}{List of Source Codes}{23}{chapter*.10}
+\contentsline {chapter}{Eidesstattliche Versicherung}{25}{chapter*.10}
