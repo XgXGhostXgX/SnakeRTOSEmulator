@@ -1,159 +1,81 @@
 %========================================================================================
 % TU Dortmund, Informatik Lehrstuhl VII
 %========================================================================================
-
 \chapter{Spiel}
 \label{Spiel}
 %
-Gehetzt sah er sich um. Plötzlich erblickte er den schmalen
-Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den
-umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-versuchte, sich in der Dunkelheit seinen Weg zu ertasten und
-erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem
-kleinen Hof als den Durchgang, durch den er gekommen war.
+In diesem Abschnitt wird das Snake Spiel beschrieben und die Funktionen von Elementen im Gameplay oder Buttons erklärt. Dabei wird gar nicht auf die Implementierung eingegangen, sondern nur erklärt wie das Spiel funktioniert.
 
 
-\section{Spiel - Unterkapitel 1}
-\label{Spiel_-_Unterkapitel_1}
+\section{Spiel - Hauptmenü}
+\label{Spiel_-_Hauptmenü}
 %
-Er hörte \enquote{leise Schritte} hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören:
-
-\begin{itemize}
-  \item Stop
-  \item Stop
-  \item Stop.
-\end{itemize}
-
-Gehetzt sah er sich um. Plötzlich erblickte er den schmalen
-Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den
-umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-versuchte, sich in der Dunkelheit seinen Weg zu ertasten und
-erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem
-kleinen Hof als den Durchgang, durch den er gekommen war. Die
-Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-die Ecke biegen. Fieberhaft irrten seine Augen durch die
-nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich
-alles vorbei, waren alle Mühe und alle Vorbereitungen umsonst \cite{Abramowski:1991}?
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.5]{bilder/Hauptmenü}
+ \caption{Hauptmenü}
+ \label{fig:hauptmenü}
+\end{figure}
+Das Hauptmenü \ref{fig:hauptmenü} erscheint beim starten des Spiels und hat fünf Buttons. Liegt der Mauszeiger über dem Fragezeichen-Button wird eine Anleitung des Spiels angezeigt. Dort wird die Steuerung für die jeweiligen Spieler angezeigt und spezielle Elemente aus dem Mehrspielermodus erklärt.\\
+\begin{minipage}[X]{1.1\textwidth}
+ \centering
+ \includegraphics[scale=0.5]{bilder/Einstellungen}
+ \captionof{figure}{Einstellungen}
+ \label{fig:einstellungen}
+\end{minipage}
+\newline \\ \\
+Wird auf das Zahnrad rechts oben geklickt, öffnet sich das Einstellungsmenü \ref{fig:einstellungen}, indem verschiedene Levels ausgewählt werden können und die Außenwand aktiviert und deaktiviert werden kann. Ist die Außenwand deaktiviert, kann die Schlange beim kollidieren mit der Außenwand nicht sterben. Durch klicken auf das Haus links oben kehrt der Spieler zum Hauptmenü zurück.\newline \newline \\ 
+\begin{minipage}[X]{1.1\textwidth}
+ \centering
+ \includegraphics[scale=0.5]{bilder/Highscore}
+ \captionof{figure}{Highscore}
+ \label{fig:highscore}
+\end{minipage}
+\newline \\ \\
+Wird im Hauptmenü auf den Highscore-Button geklickt, wird der Highscore \ref{fig:highscore} aus den bisher gespielten Spielen angezeigt. Dabei sind die Highscores primär nach Punkten und sekundär nach Zeit sortiert. Außerdem steht in jeweils der letzten Zeile der Highscores das Level, indem gespielt wurde. Mit Klicken auf das Haus links oben kehrt der Spieler zurück zum Hauptmenü.
+\\
+ Klickt der Spieler auf den "One Player Game"-Button öffnet sich ein Menü, indem der Spieler seinen Namen eintragen kann. Dies kann durch Klicken auf die jeweiligen Buttons auf dem Bildschirm oder durch Eingabe über die Tastatur geschehen. Das Spiel wird dann gestartet, wenn der StartGame-Button betätigt wurde. Wählt der Spieler den Mehrspielermodus, durch Betätigen des "Two Player Game"-Button im Hauptmenü, öffnet sich wieder ein Menü zum Eintragen der Spielernamen und das Spiel kann durch das Betätigen des StartGame-Buttons gestartet werden.  
 
 
-
-    \begin{figure}[t]
-    \centering
-    \subfigure[]
-          {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild_a}
-    }
-    \hspace{0.5cm}%
-    \subfigure[]
-         {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild_b}
-    }
-    \caption[Testbilder]{Testbilder}
-        \label{fig_testbild}
-    \end{figure}
-
-Er presste sich ganz eng an die Wand hinter ihm und hoffte, der
-Verfolger würde ihn übersehen, als plötzlich neben ihm mit kaum
-wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her
-schwang. Könnte dieses der flehentlich herbeigesehnte Ausweg aus
-seinem Dilemma sein? Langsam bewegte er sich auf die offene Tür
-zu, immer dicht an die Mauer gepresst. Würde diese Tür seine
-Rettung werden? Er hörte leise Schritte hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich
-um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-drehte er sich nach rechts und verschwand zwischen den beiden
-Gebäuden.
-
-
-\section{Spiel - Unterkapitel 2}
-\label{Spiel_-_Unterkapitel_2}
+\section{Spiel - Einzelspielermodus}
+\label{Spiel_-_Einzelspielermodus}
 %
-Er hörte \enquote{leise Schritte} hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören:
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.5]{bilder/Einzelspielermodus}
+ \caption{Einzelspieler Spiel}
+ \label{fig:einzelspielermodus}
+\end{figure}
+	Der Einzelspielermodus ist im Grunde das traditionelle Snake Game. Die Schlange lässt sich steuern durch Betätigen der Tasten A,S,D,F und bewegt sich alle fünf Frames. Die grünen Elemente sind das Essen der Schlange, welches die Schlange wachsen lässt. Dabei wächst die Schlange um eine Größe beim Verzehren des kleinen Food-Elements und um zwei beim Verzehren des großen Superfood-Elements.
+	Das Spiel kann durch die entsprechenden Levels erschwert werden.Level fünf hat ein lilanes Teleport-Element, welches die Schlange zu einem anderen Teleport-Element teleportiert. Dabei teleportieren die oberen Elemente zum nächsten rechten Element und die unteren Elemente zum nächsten linkem Element. Level 6 verändert sein inneres Wandmuster nach dem Verzehren des Food-Elements jedoch nicht nach Verzehren des Superfood-Elements. Das Spiel endet, wenn die Schlange mit der Wand oder mit sich selber kollidiert.   
 
 
-    \begin{equation}
-        \label{gleichung_nummer_1}
-        \mu_{x}(y) = \left\{ \begin{array}{lll}
-        4^{\alpha_0} & \qquad \textrm{für} \qquad y \leq 3\\
-        \\
-        4^{\alpha_1} & \qquad \textrm{für} \qquad y > 3\\
-        \end{array} \right.
-    \end{equation}
-    mit
-    \begin{eqnarray}
-        \label{gleichung_nummer_2}
-        \alpha_0 & = & -\ln 2 \cdot y - \bar{y}\\
-        \alpha_1 & = & -\ln 2 \cdot y - \bar{y}\textrm{.}
-    \end{eqnarray}
+\section{Spiel - Mehrspielermodus}
+\label{Spiel_-_Mehrspielermodus}
+%
+\textcolor{white}{easily}
+\newline 
+\begin{minipage}[X]{1.0\textwidth}
+ \centering
+ \includegraphics[scale=0.5]{bilder/Mehrspielermodus}
+ \captionof{figure}{Mehrspieler Spiel}
+ \label{fig:mehrspielermodus}
+\end{minipage}
+\\ \\ 
+	Beim Mehrspielermodus spielen zwei Spieler gegeneinander und versuchen das Spiel durch töten der Schlange des Gegenspielers zu gewinnen. Spieler eins bewegt die rote Schlange mit den Tasten A,S,D,F und Spieler zwei bewegt die blaue Schlange mit den Pfeiltasten. Im Mehrspielermodus gibt es außerdem Spezial-Elemente, wie das cyanfarbene Freeze-Element, das gelbe Reduce-Element und das graue Inverse Element. Diese Elemente können aufgesammelt werden und mit Leertaste für Spieler eins und mit Shift für Spieler zwei eingesetzt werden. Dabei kann nur ein Element gleichzeitig in der Tasche eines jeweiligen Spielers sein. Beim Einsatz des Freeze-Elementes kann die gegnerische Schlange sich für 25 Frames nicht bewegen. Beim Einsatz des Reduce Elementes veringert sich die Länge der gegnerischen Schlange um eine Größe. Das Inverse-Element invertiert die Steuerung des Gegenspielers für 250 Frames. Das Spiel ist beendet, wenn eines der Spieler verliert. Kollidiert die Schlange eines Spielers mit der Wand, sich selber oder dem Körper der gegnerischen Schlange, verliert derjenige Spieler. Kollidieren beide Schlangen Kopf an Kopf gewinnt derjenige Spieler mit der größeren Schlange.  
 
-
-
-Gehetzt sah er sich um. Plötzlich erblickte er den schmalen
-Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den
-umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-versuchte, sich in der Dunkelheit seinen Weg zu ertasten und
-erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem
-kleinen Hof als den Durchgang, durch den er gekommen war. Die
-Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-die Ecke biegen. Fieberhaft irrten seine Augen durch die
-nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich
-alles vorbei, waren alle Mühe und alle Vorbereitungen umsonst?
-
-Er presste sich ganz eng an die Wand hinter ihm und hoffte, der
-Verfolger würde ihn übersehen, als plötzlich neben ihm mit kaum
-wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her
-schwang. Könnte dieses der flehentlich herbeigesehnte Ausweg aus
-seinem Dilemma sein? Langsam bewegte er sich auf die offene Tür
-zu, immer dicht an die Mauer gepresst. Würde diese Tür seine
-Rettung werden? Er hörte leise Schritte hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich
-um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-drehte er sich nach rechts und verschwand zwischen den beiden
-Gebäuden.
-
-
-
-
-
-
+\section{Spiel - Spielende}
+\label{Spiel_-_Spielende}
+%
+\textcolor{white}{easily}
+\newline 
+\begin{minipage}[X]{1.1\textwidth}
+ \centering
+ \includegraphics[scale=0.5]{bilder/Spielende}
+ \captionof{figure}{Spielende}
+ \label{fig:spielende}
+\end{minipage}
+\\ \\ 
+	Ist das Spiel zu Ende erscheint eine kleine Animation und mehrere Buttons. Der Restart-Button startet das Spiel neu und der Highscore-Button zeigt den Highscore an. Außerdem steht über dem Spielfeld welcher Spieler gewonnen hat.  
 
 %
