@@ -5,215 +5,25 @@
 \chapter{Spiel Logik}
 \label{Spiel_Logik}
 %
-Gehetzt sah er sich um. Plötzlich erblickte er den schmalen
-Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den
-umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-versuchte, sich in der Dunkelheit seinen Weg zu ertasten und
-erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem
-kleinen Hof als den Durchgang, durch den er gekommen war.
-
-\section{Spiel Logik - Unterkapitel 1}
-\label{Spiel_Logik_-_Unterkapitel_1}
+In diesem Kapitel gehen wir auf die Hauptfunktion des eigentlichen Spielablaufs, $vGameScreen()$, und der dafür benötigten einzelnen Funktionen ein. Wie in den meisten Computerspielen besteht die Hauptfunkion im groben aus einer einzigen großen Schleife, in der zum der aktuelle Spielzustand abhängig von den Eingaben der Spieler geändert wird, und zum anderen der aktuelle Spielzustand grafisch aufgearbeitet und auf den Bildschirm gebracht wird. Vor dem Start dieser Schleife findet noch eine Initialisierung statt, welche den Spielzustand auf den Anfang des Spiels setzt.
 %
-    \begin{algorithm}[t]
-    \centering
-    \caption[Ein Algorithmus]{Algorithmus} \label{algo_1}
-    \begin{algorithmic}
-    \REQUIRE Wert $x :=3$
-    \ENSURE Wert für $y$
-    \STATE $z = 2$
-    \WHILE{$(z < 10)$}
-    \STATE $x = x + z$
-    \FOR{$(1 \leq a \leq z-1)$}
-    \STATE $z = z + 1$
-    \ENDFOR
-    \ENDWHILE
-    \end{algorithmic}
-    \end{algorithm}
 
-
-Er hörte \enquote{leise Schritte} hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben
-schon hören.
-
-Gehetzt sah er sich um. Plötzlich erblickte er den schmalen
-Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den
-umgestürzten Mülleimer gefallen, der mitten im Weg lag. Er
-versuchte, sich in der Dunkelheit seinen Weg zu ertasten und
-erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem
-kleinen Hof als den Durchgang, durch den er gekommen war. Die
-Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um
-die Ecke biegen. Fieberhaft irrten seine Augen durch die
-nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich
-alles vorbei, waren alle Mühe und alle Vorbereitungen umsonst?
-
-Er presste sich ganz eng an die Wand hinter ihm und hoffte, der
-Verfolger würde ihn übersehen, als plötzlich neben ihm mit kaum
-wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her
-schwang. Könnte dieses der flehentlich herbeigesehnte Ausweg aus
-seinem Dilemma sein? Langsam bewegte er sich auf die offene Tür
-zu, immer dicht an die Mauer gepresst. Würde diese Tür seine
-Rettung werden? Er hörte leise Schritte hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich
-um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-drehte er sich nach rechts und verschwand zwischen den beiden
-Gebäuden.
-
-
-%\begin{lstlisting}[style=C++, caption=Beispielcode]{Name}
-%#include <stdio.h>
-%#include <stdlib.h>
-
-%int main() {
-
-%    int counter = 100;
-%    for(int i = 1; i < 100; i++){
-%        if(counter > i) printf("Hallo");
-%        counter--;
-%    }
-%}
-
-%return 0;
-%\end{lstlisting}
-
-
-
-
-
-\section{Spiel Logik - Unterkapitel 2}
-\label{Spiel_Logik_-_Unterkapitel_2}
+\section{Initialisierung}
+\label{Initialisierung}
 %
-\begin{table}[b]
-\centering
-\begin{tabular}{lrr}
-\toprule
-\multicolumn{2}{c}{Studium}\\ \cmidrule{1-2}
-Fach & Dauer & Einkommen (\euro{})\\
-\midrule
-Info & 2 & 12,75 \\ \addlinespace
-MST & 6 & 8,20 \\ \addlinespace
-Informatik & 14 & 10,00\\
-\bottomrule
-\end{tabular}
-\caption{Studium}
-\label{table:Studium}
-\end{table}
+Das erste, was nach Starten des Spiel geschieht, ist das Erstellen eine Art $seed$ für die $rand()$ Funktion der C - Programmiersprache. Da die $rand()$ Funktion die verstrichene Zeit seit Aufruf der Funktion in der sie aufgerufen wird als Basis für die Berechnung der Pseudozufallszahl nimmt, die ersten Aufrufe der $rand()$ Funktion immer die gleichen Werte zurückgeben, und somit die Schlangen der Spieler sowie das erste $foodElement$ immer an der gleichen Stelle starten. Um den entgegenzuwirken berechnet die Funktion als erstes die letzten beiden Ziffern des Produkts der x- und y-Koordinaten der Mausposition beim klicken des Start-Buttons und dekrementiert diese Zahl bis zur null. Durch diese minimale verstrichene Zeitspanne ändern sich die Ergebnisse der ersten $rand()$-Aufrufe und damit der Startzustand des Spielfelds, vorrausgesetzt man drückt beim Start nicht auf den exakt gleichen Pixel wie vorher.
+Anschließend werden, je nach gewähltem Level, die Wände sowie alle weiteren festen Elemente des Levels an ihre entsprechenden Stellen ins $fieldArray$ geschrieben.
+Daraufhin werden die Variablen für die Position der beiden Spieler, $p1X, p1Y, p2X$ und $p2Y$, sowie das erste $foodElement$, auf zufällige Positionen im Spielfeld gesetzt und die zugehörigen verketteten Listen für die Schlangen mit bereits 2 weiteren "Schlangenteilen" initialisiert. Dies geschieht auch im Singleplayer-Modus für die Schlange von Spieler 2, da der Code ansonsten aufgrund einer möglicherweise nicht initialisierten Spieler-2-Schlange nicht kompiliert. Einzig der Eintrag im $fieldArray()$  wird im Singleplayer-Modus ausgelassen, da offensichtlich kein Spieler 2 existiert.
+Nun ist das Spielfeld soweit initialisiert dass das eigentliche Spiel beginnen kann.
 %
-Er presste sich ganz eng an die Wand hinter ihm und hoffte, der
-Verfolger würde ihn übersehen, als plötzlich neben ihm mit kaum
-wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her
-schwang. Könnte dieses der flehentlich herbeigesehnte Ausweg aus
-seinem Dilemma sein? Langsam bewegte er sich auf die offene Tür
-zu, immer dicht an die Mauer gepresst. Würde diese Tür seine
-Rettung werden? Er hörte leise Schritte hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich
-um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-drehte er sich nach rechts und verschwand zwischen den beiden
-Gebäuden.
 
-    \begin{figure}[t]
-    \centering
-    \subfigure[testbild2a]
-          {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild2_a}
-    }
-    \hspace{1.5cm}%
-    \subfigure[testbild2b]
-         {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild2_b}
-    }\\
-    \subfigure[testbild2c]
-          {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild2_c}
-    }
-    \hspace{1.5cm}%
-    \subfigure[testbild2d]
-         {\includegraphics[scale=0.8]{bilder/testbild}\label{fig_testbild2_d}
-    }\\
-    \caption[Weitere Testbilder]{Weitere Testbilder}
-        \label{fig_testbild2}
-    \end{figure}
+\section{Gameloop}
+\label{Gameloop}
+%
 
-Er presste sich ganz eng an die Wand hinter ihm und hoffte, der
-Verfolger würde ihn übersehen, als plötzlich neben ihm mit kaum
-wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her
-schwang. Könnte dieses der flehentlich herbeigesehnte Ausweg aus
-seinem Dilemma sein? Langsam bewegte er sich auf die offene Tür
-zu, immer dicht an die Mauer gepresst. Würde diese Tür seine
-Rettung werden? Er hörte leise Schritte hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich
-um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig
-drehte er sich nach rechts und verschwand zwischen den beiden
-Gebäuden.
+%
 
-Er hörte \enquote{leise Schritte} hinter sich. Das bedeutete
-nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und
-dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht
-hatte und mit der Beute verschwinden wollte! Hatte einer seiner
-zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und
-abgewartet, um ihn nun um die Früchte seiner Arbeit zu
-erleichtern? Oder gehörten die Schritte hinter ihm zu einem der
-unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um
-seine Handgelenke würde gleich zuschnappen? Er konnte die
-Aufforderung stehen zu bleiben
-schon hören.
 
-Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes.Wer würde ihm schon folgen,
-spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten
-Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute
-verschwinden wollte! Hatte einer seiner zahllosen Kollegen dieselbe Idee gehabt, ihn
-beobachtet und abgewartet, um ihn nun um die Früchte seiner Arbeit zu erleichtern?
-Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser
-Stadt, und die stählerne Acht um seine Handgelenke würde gleich zuschnappen? Er
-konnte die Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich um. Plötzlich
-erblickte er den schmalen Durchgang. Blitzartig drehte er sich nach rechts und verschwand
-zwischen den beiden Gebäuden. Beinahe wäre er dabei über den umgestürzten Mülleimer
-gefallen, der mitten im Weg lag. Er versuchte, sich in der Dunkelheit seinen Weg zu
-ertasten und erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem kleinen
-Hof als den Durchgang, durch den er gekommen war. Die Schritte wurden lauter und
-lauter, er sah eine dunkle Gestalt um die Ecke biegen. Fieberhaft irrten seine Augen durch
-die nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich alles vorbei,
-waren alle Mühe und alle Vorbereitungen umsonst? Er presste sich ganz eng an die Wand
-hinter ihm und hoffte, der Verfolger würde ihn übersehen, als plötzlich neben ihm mit
-kaum wahrnehmbarem Quietschen eine Tür im nächtlichen Wind hin und her schwang.
-Könnte dieses der flehentlich herbeigesehnte Ausweg aus seinem Dilemma sein? Langsam
-bewegte er sich auf die offene Tür zu, immer dicht an die Mauer gepresst. Würde diese
-Tür seine Rettung werden?
+   
 
 %
