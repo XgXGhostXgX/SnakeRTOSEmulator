@@ -5,47 +5,27 @@
 \chapter{Struktur}
 \label{Struktur}
 %
-In diesem Abschnitt wird beschrieben, wie das Spiel in seiner Struktur aufgebaut ist, entspricht wie jedes einzelne Element sich zum Gesamtspiel aufbaut. Dabei wird von jedem Essenselement bis hin zum Bildschirm die Implementierung und Erzeugung erkl{\"a}rt.
-%
-\section{Elemente}
-\label{Elemente}
+In diesem Abschnitt wird beschrieben, wie das Spiel in seiner Struktur aufgebaut ist. Dabei werden die Verh{\"a}ltnisse und die Relationen einzelner Elemente miteinander bezogen. 
 %
 
-%    \begin{algorithm}[t]
-%    \centering
-%    \caption[Ein Algorithmus]{Algorithmus} \label{algo_1}
-%    \begin{algorithmic}
-%    \REQUIRE Wert $x :=3$
-%    \ENSURE Wert für $y$
-%    \STATE $z = 2$
-%    \WHILE{$(z < 10)$}
-%    \STATE $x = x + z$
-%    \FOR{$(1 \leq a \leq z-1)$}
-%    \STATE $z = z + 1$
-%    \ENDFOR
-%    \ENDWHILE
-%    \end{algorithmic}
-%    \end{algorithm}
-
-%int main() {
-
-%    int counter = 100;
-%    for(int i = 1; i < 100; i++){
-%        if(counter > i) printf("Hallo");
-%        counter--;
-%    }
-%}
-
-%return 0;
-%\end{lstlisting}
-%
-\section{Relation der Elemente}
-\label{Relation_der_Elemente}
-%
-
-%
 \section{Zust{\"a}nde}
 \label{Zustaende}
+% 
+Das Spiel l{\"a}uft {\"u}ber drei Zust{\"a}nde, da das Spiel {\"u}ber den RTOS-Emulator l{\"a}uft und der Emulator mit Zust{\"a}nden arbeitet. Jeder Zustand arbeitet wie eine Prozess (Task), das bedeutet es kann jeweils nur einer dieser Zust{\"a}nde gleichzeitig arbeiten und die anderen kommen in ein wartenden Bereich. \\
+Im erster Zustand wird das Hauptmen{\"u} angezeigt. Dabei werden die Voreinstellungen und die Wahl des Spielmodi gew{\"a}hlt. Obwohl in diesem Prozess verschiedene Anzeigen, wie z.b. Levelauswahl oder Informationbildschirm, des Bildschirms existieren, wird lediglich nur der Bildschirm aktualisiert ohne den Zustand zu wechseln. \\
+Der zweite Zustand wird erreicht, indem das w{\"a}hlen des Spielmodis und Eingabe des Names vom Spieler eingegeben wurde. Somit handelt dieser Prozess um das Spiel an sich, das bedeutet, dass die Spielregeln beachtet und jegliche Ver{\"a}derungen im Spiel hier verarbeitet werden. \\
+Der letzte Zustand verarbeitet die Rekord bzw. Besten-Liste (Highscore). Hierbei werden die besten zehn Spieler mit den h{\"ochsten} Punkten angezeigt. Dieser Zustand h{\"a}lt die Liste der besten zehn Spieler auf dem aktuellsten Stand und diese Daten werden in einer Datei (\glqq Highscore.txt\grqq{}) gespeichert und exportiert. Insbesondere wird die Datei auch importiert zum Ausgeben der besten Spieler. \\
+Jeder Zustand kann durch klicken von Kn{\"o}pfen erreicht werden und der Spieler merkt diese {\"U}berg{\"a}nge in der Regel nicht.
 %
 
+%
+\section{Verh{\"a}ltnisse der Elemente}
+\label{Verhaeltnisse_der_Elemente}
+%
+Die Verh{\"a}tnisse der Elemente werden im Bezug zu den Zust{\"a}nde beschrieben. \\
+Im Hauptmen{\"u} werden Elemente wie Kn{\"o}pfe und Symbole verwendet. Durch dr{\"u}cken eines der Kn{\"o}pfe k{\"o}nnen mehrere Informationen den Nutzer angezeigt werden. Dabei wird der Bildschirm lediglich erneuert, indem der Hintergrund neu gef{\"u}llt wird und dann die neuen Informationen dargestellt. Dasselbe geschieht mit den Voreinstellung des Levels. Die Maus ist auf dem Bildschirm von der Darstellungsebene ganz vorne gesetzt, da die Maus {\"u}ber jedes Objekt sein kann. Entsprechend falls die Maus sich {\"u}ber einer der Kn{\"o}pfe befindet, {\"a}ndert sich die Farbe des Knopfes in grau, um visuell zu zeigen, dass die Maus sich in diesem Bereich befindet. \\ 
+Der Highscore Zustand arbeitet sehr {\"a}hnlich wie das Hauptmen{\"u}. Falls sich die Liste {\"a}ndert wird der Bildschirm mit dem Hintergrund neugef{\"u}llt und die Liste danach visualisiert. Jedes mal beim betreten dieses Zustandes wird die Liste durch die Datei \glqq Highscore.txt\grqq{} importiert um die aktuellste List darzustellen. \\
+Im Spiel werden mehrere Elemente verwendet, wie z.B. das Food-Element, das Wandelement, die Schlange und das Inventar des Spielers. Dabei ist klar je nach Voreinstellung, dass bei einer Kollision von der Schlange mit der Wand, das Spiel zu Ende sein kann. Damit ist die Schlange untergeordnet als die Wandelemente. Insbesondere ist die Schlange auch innerhalb des Spielfeldes von der Wand eingeschlossen. Im Fall das die W{\"a}nde deaktiviert wurden, springt die Schlange einfach in die gegen{\"u}berliegende Spielfeldseite. Das Teleport-Element in Level 5 besitzt den selben Rang wie die Wandelemente, da durch zusammentreffen mit der Schlange, die Schlange nur an einer anderen Position verschiebt wird. Dagegen sind die PickUp-Elemente wie Food-Element, SuperFood-Element, Decrease-Element, Freeze-Element und Invert-Element von der Schlange abh{\"a}ngig, weil die Schlange diese Elemente aufnehmen kann. Dar{\"u}berhinaus d{\"u}rfen die PickUp-Elemente nicht auf der Schlange erzeugt werden, somit sind diese untergeordnet als die Schlange. Die jeweiligen Schlangen haben jeweils eine Liste als Datenstruktur, damit es einfacher ist Elemente hinzuzuf{\"u}gen und zu entfernen. Durch aufnehmen der Elemente werden einige in ein Inventar gepackt, dabei werden immer die letzten aufgenommen Elemente behalten. Diese Elemente werden jeweils an der Seite des Spielers angezeigt. 
+
+ 
 %

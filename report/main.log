@@ -1,50 +1,53 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.28)  28 SEP 2020 23:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.13)  29 SEP 2020 00:34
 entering extended mode
-**./main.tex
-(main.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-03>
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 14 language(s) loaded.
 \@input{header.aux}
 \openout2 = `header.aux'.
 
-(header.tex ("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
+(./header.tex (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX\tex/generic/iftex\ifpdf.sty"
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-
-("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)) pdfLaTeX
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrbook.c
-ls"
-Document Class: scrbook 2020/07/22 v3.31 KOMA-Script document class (book)
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrkbase.
-sty"
-Package: scrkbase 2020/07/22 v3.31 KOMA-Script package (KOMA-Script-dependent b
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+) pdfLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2017/09/07 v3.24 KOMA-Script document class (book)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrbase.s
-ty"
-Package: scrbase 2020/07/22 v3.31 KOMA-Script package (KOMA-Script-independent 
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
- ("C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlfile.
-sty"
-Package: scrlfile 2020/07/22 v3.31 KOMA-Script package (loading files)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2017/09/07 v3.24 KOMA-Script package (loading files)
 )))
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\tocbasic.
-sty"
-Package: tocbasic 2020/07/22 v3.31 KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip47
-\scr@dte@tocline@numbox=\box45
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2017/09/07 v3.24 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box26
 )
-Package tocbasic Info: babel extension for `toc' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 137.
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 135.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 137.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 138.
+Package tocbasic Info: defining new hook before heading of `' on input line 162
+3.
 Package scrbook Info: You've used standard option `11pt'.
 (scrbook)             This is correct!
 (scrbook)             Internally I'm using `fontsize=11pt'.
@@ -52,18 +55,16 @@ Package scrbook Info: You've used standard option `11pt'.
 (scrbook)             you'd have to use `fontsize=11pt' there
 (scrbook)             instead of `11pt', too.
 Class scrbook Info: File `scrsize11pt.clo' used to setup font sizes on input li
-ne 2436.
+ne 2296.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrsize11
-pt.clo"
-File: scrsize11pt.clo 2020/07/22 v3.31 KOMA-Script font size class option (11pt
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2017/09/07 v3.24 KOMA-Script font size class option (11pt
 )
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\typearea.
-sty"
-Package: typearea 2020/07/22 v3.31 KOMA-Script package (type area)
-\ta@bcor=\skip48
-\ta@div=\count168
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2017/09/07 v3.24 KOMA-Script package (type area)
+\ta@bcor=\skip42
+\ta@div=\count79
 Package typearea Info: You've used standard option `pdftex'.
 (typearea)             This is correct!
 (typearea)             Internally I'm using `pagesize=pdftex'.
@@ -76,10 +77,10 @@ Package typearea Info: You've used standard option `a4paper'.
 (typearea)             If you'd like to set the option with \KOMAoptions,
 (typearea)             you'd have to use `paper=a4' there
 (typearea)             instead of `a4paper', too.
-\ta@hblk=\skip49
-\ta@vblk=\skip50
-\ta@temp=\skip51
-\footheight=\skip52
+\ta@hblk=\skip43
+\ta@vblk=\skip44
+\ta@temp=\skip45
+\footheight=\skip46
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 10
 (typearea)             BCOR = 0.0pt
@@ -96,281 +97,226 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1739.
+(typearea)              on input line 1686.
 )
-\c@part=\count169
-\c@chapter=\count170
-\c@section=\count171
-\c@subsection=\count172
-\c@subsubsection=\count173
-\c@paragraph=\count174
-\c@subparagraph=\count175
-\scr@dte@chapter@maxnumwidth=\skip53
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\chapter on input line 5624.
-\scr@dte@section@maxnumwidth=\skip54
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\section on input line 5635.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\section on input line 5635.
-\scr@dte@part@maxnumwidth=\skip55
-Class scrbook Info: using compatibility default `afterindent=true'
-(scrbook)           for `\part on input line 5644.
-\scr@dte@subsection@maxnumwidth=\skip56
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subsection on input line 5654.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subsection on input line 5654.
-\scr@dte@subsubsection@maxnumwidth=\skip57
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subsubsection on input line 5664.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subsubsection on input line 5664.
-\scr@dte@paragraph@maxnumwidth=\skip58
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\paragraph on input line 5675.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\paragraph on input line 5675.
-\scr@dte@subparagraph@maxnumwidth=\skip59
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subparagraph on input line 5685.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subparagraph on input line 5685.
-\abovecaptionskip=\skip60
-\belowcaptionskip=\skip61
-\c@pti@nb@sid@b@x=\box46
-Package tocbasic Info: babel extension for `lof' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6928.
-
-\scr@dte@figure@maxnumwidth=\skip62
-\c@figure=\count176
-Package tocbasic Info: babel extension for `lot' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 6949.
-
-\scr@dte@table@maxnumwidth=\skip63
-\c@table=\count177
-Class scrbook Info: Redefining `\numberline' on input line 7122.
-\bibindent=\dimen134
-) ("C:\Program Files\MiKTeX\tex/generic/babel\babel.sty"
-Package: babel 2020/09/01 3.48 The Babel package
-
-("C:\Program Files\MiKTeX\tex/generic/babel\babel.def"
-File: babel.def 2020/09/01 3.48 Babel common definitions
-\babel@savecnt=\count178
-\U@D=\dimen135
-\l@babelnohyphens=\language79
-
-("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
-\bbl@readstream=\read2
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\scr@dte@part@maxnumwidth=\skip47
+\scr@dte@chapter@maxnumwidth=\skip48
+\scr@dte@section@maxnumwidth=\skip49
+\scr@dte@subsection@maxnumwidth=\skip50
+\scr@dte@subsubsection@maxnumwidth=\skip51
+\scr@dte@paragraph@maxnumwidth=\skip52
+\scr@dte@subparagraph@maxnumwidth=\skip53
+LaTeX Info: Redefining \textsubscript on input line 4966.
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\c@pti@nb@sid@b@x=\box27
+\c@figure=\count87
+\c@table=\count88
+Class scrbook Info: Redefining `\numberline' on input line 6142.
+\bibindent=\dimen102
 )
-\bbl@dirlevel=\count179
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/babel-german\ngerman.
-ldf"
-Language: ngerman 2020/07/21 v2.12 German support for babel (post-1996 orthogra
-phy)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/babel-german\ngermanb
-.ldf"
-Language: ngermanb 2020/07/21 v2.12 German support for babel (post-1996 orthogr
-aphy)
-Package babel Info: Making " an active character on input line 121.
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count90
+)
+Package babel Info: Making " an active character on input line 125.
 )))
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/float\float.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count180
-\float@exts=\toks16
-\float@box=\box47
-\@float@everytoks=\toks17
-\@floatcapt=\box48
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box28
+\@float@everytoks=\toks16
+\@floatcapt=\box29
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/thumbpdf\thumbpdf.s
-ty"
-Package: thumbpdf 2018/09/07 v3.17 Inclusion of thumbnails (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
+Package: thumbpdf 2014/07/15 v3.16 Inclusion of thumbnails (HO)
+
+
+Package thumbpdf Warning: Compressed PDF objects of PDF 1.5 are not supported.
 
 
 Package thumbpdf Warning: Thumbnail data file `main.tpt' not found.
 
-) ("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
-File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen136
-\Gin@req@width=\dimen137
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-("C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty"
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-"
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-) ("C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty"
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr
-.sty"
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/kvsetkeys\kvsetkeys
-.sty"
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefi
-nekeys.sty"
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape
-.sty"
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty"
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/letltxmacro\letltxmac
-ro.sty"
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty"
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+\@linkdim=\dimen106
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.s
-ty"
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+\Hy@SavedSpaceFactor=\count94
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-\@linkdim=\dimen138
-\Hy@linkcounter=\count181
-\Hy@pagecounter=\count182
- ("C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def"
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
-)
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
-"
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.s
-ty"
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count183
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count184
- ("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
-\Urlmuskip=\muskip16
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count95
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen139
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty"
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintca
-lc.sty"
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count185
-\Field@Width=\dimen140
-\Fld@charsize=\dimen141
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/atbegshi\atbegshi.s
-ty"
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
-)
-\Hy@abspage=\count186
-\c@Item=\count187
-\c@Hfootnote=\count188
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen107
+\Fld@menulength=\count96
+\Field@Width=\dimen108
+\Fld@charsize=\dimen109
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count97
+\c@Item=\count98
+\c@Hfootnote=\count99
 )
 Package hyperref Info: Driver: hpdftex.
- ("C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def"
-File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/atveryend\atveryend.s
-ty"
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-)
-\Fld@listcount=\count189
-\c@bookmark@seq@number=\count190
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count100
+\c@bookmark@seq@number=\count101
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunf
-ilecheck.sty"
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniqu
-ecounter.sty"
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+82.
 )
-\Hy@SectionHShift=\skip64
+\Hy@SectionHShift=\skip56
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
-"
-Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
- ("C:\Program Files\MiKTeX\tex/latex/tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count191
-\calc@Bcount=\count192
-\calc@Adimen=\dimen142
-\calc@Bdimen=\dimen143
-\calc@Askip=\skip65
-\calc@Bskip=\skip66
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen110
+\calc@Bdimen=\dimen111
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count193
-\calc@Cskip=\skip67
+\calc@Ccount=\count104
+\calc@Cskip=\skip59
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty"
-Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -384,19 +330,17 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-\AM@pagewidth=\dimen144
-\AM@pageheight=\dimen145
+\AM@pagewidth=\dimen112
+\AM@pageheight=\dimen113
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pppdftex.def
-"
-File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box49
-\AM@global@opts=\toks18
-\AM@pagecnt=\count194
-\AM@toc@title=\toks19
-\c@AM@survey=\count195
-\AM@templatesizebox=\box50
+\AM@pagebox=\box30
+\AM@global@opts=\toks17
+\AM@toc@title=\toks18
+\c@AM@survey=\count105
+\AM@templatesizebox=\box31
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -411,224 +355,531 @@ Package hyperref Info: Option `bookmarksopen' set `true' on input line 53.
 Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 53.
 
 Package hyperref Info: Option `plainpages' set `false' on input line 53.
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
-"
-Package: geometry 2020/01/02 v5.9 Page Geometry
- ("C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty"
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count106
+\Gm@cntv=\count107
+\c@Gm@tempcnt=\count108
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks19
 )
-\Gm@cnth=\count196
-\Gm@cntv=\count197
-\c@Gm@tempcnt=\count198
-\Gm@bindingoffset=\dimen146
-\Gm@wd@mp=\dimen147
-\Gm@odd@mp=\dimen148
-\Gm@even@mp=\dimen149
-\Gm@layoutwidth=\dimen150
-\Gm@layoutheight=\dimen151
-\Gm@layouthoffset=\dimen152
-\Gm@layoutvoffset=\dimen153
-\Gm@dimlist=\toks20
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg
-")) ("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip68
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen154
+\@emptytoks=\toks20
+\ex@=\dimen122
 ))
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen155
+\pmbraise@=\dimen123
 )
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count199
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count266
-\leftroot@=\count267
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count268
-\DOTSCASE@=\count269
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
-\big@size=\dimen156
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count270
-\c@MaxMatrixCols=\count271
-\dotsspace@=\muskip17
-\c@parentequation=\count272
-\dspbrk@lvl=\count273
-\tag@help=\toks22
-\row@=\count274
-\column@=\count275
-\maxfields@=\count276
-\andhelp@=\toks23
-\eqnshift@=\dimen157
-\alignsep@=\dimen158
-\tagshift@=\dimen159
-\tagwidth@=\dimen160
-\totwidth@=\dimen161
-\lineht@=\dimen162
-\@envbody=\toks24
-\multlinegap=\skip69
-\multlinetaggap=\skip70
-\mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen124
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks21
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks22
+\eqnshift@=\dimen125
+\alignsep@=\dimen126
+\tagshift@=\dimen127
+\tagwidth@=\dimen128
+\totwidth@=\dimen129
+\lineht@=\dimen130
+\@envbody=\toks23
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX\tex/latex/base\flafter.sty"
-Package: flafter 2018/11/28 v1.4d Standard LaTeX floats after reference (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/base/flafter.sty
+Package: flafter 2017/04/11 v1.4a Standard LaTeX floats after reference (FMi)
 Applying: [2015/01/01] float order in 2-column on input line 49.
 Already applied: [0000/00/00] float order in 2-column on input line 151.
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.s
-ty"
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip71
-\subfigcapskip=\skip72
-\subfigcaptopadj=\dimen163
-\subfigbottomskip=\skip73
-\subfigcapmargin=\dimen164
-\subfiglabelskip=\skip74
-\c@subfigure=\count277
-\c@lofdepth=\count278
-\c@subtable=\count279
-\c@lotdepth=\count280
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip63
+\subfigcapskip=\skip64
+\subfigcaptopadj=\dimen131
+\subfigbottomskip=\skip65
+\subfigcapmargin=\dimen132
+\subfiglabelskip=\skip66
+\c@subfigure=\count121
+\c@lofdepth=\count122
+\c@subtable=\count123
+\c@lotdepth=\count124
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.c
-fg")
-\subfig@top=\skip75
-\subfig@bottom=\skip76
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip67
+\subfig@bottom=\skip68
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/textpos\textpos.sty"
-Package: textpos 2019/04/15 v1.9.1
+(/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2016/06/07 v1.8
 
-Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
-("C:\Program Files\MiKTeX\tex/latex/ms\everyshi.sty"
+Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box53
-\TP@holdbox=\box54
-\TPHorizModule=\dimen165
-\TPVertModule=\dimen166
-\TP@margin=\dimen167
-\TP@absmargin=\dimen168
+\TP@textbox=\box34
+\TP@holdbox=\box35
+\TPHorizModule=\dimen133
+\TPVertModule=\dimen134
+\TP@margin=\dimen135
+\TP@absmargin=\dimen136
 
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen169
-\TP@ox=\dimen170
-\TP@oy=\dimen171
-\TP@tbargs=\toks26
-\TP@prevdepth=\dimen172
+\TPboxrulesize=\dimen137
+\TP@ox=\dimen138
+\TP@oy=\dimen139
+\TP@tbargs=\toks25
+\TP@prevdepth=\dimen140
 TextBlockOrigin set to 0pt x 0pt
 )
 TextBlockOrigin set to 0mm x 0mm
-("C:\Program Files\MiKTeX\tex/latex/base\fix-cm.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 
-("C:\Program Files\MiKTeX\tex/latex/base\ts1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrhack.s
-ty"
-Package: scrhack 2020/07/22 v3.31 KOMA-Script package (hacking other packages)
- ("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/xpatch\xpatch.sty" (
-"C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
-Package: expl3 2020-09-03 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
+Package: scrhack 2017/09/07 v3.24 KOMA-Script package 
 
-("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
-File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count281
-\l__pdf_internal_box=\box55
-))
-Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/02/21 L3 programming layer (loader) 
 
-("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
-Package: xparse 2020-05-15 L3 Experimental document command parser
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/02/21 L3 programming layer (code)
+\c_max_int=\count125
+\l_tmpa_int=\count126
+\l_tmpb_int=\count127
+\g_tmpa_int=\count128
+\g_tmpb_int=\count129
+\g__intarray_font_int=\count130
+\g__prg_map_int=\count131
+\c_log_iow=\count132
+\l_iow_line_count_int=\count133
+\l__iow_line_target_int=\count134
+\l__iow_one_indent_int=\count135
+\l__iow_indent_int=\count136
+\c_zero_dim=\dimen141
+\c_max_dim=\dimen142
+\l_tmpa_dim=\dimen143
+\l_tmpb_dim=\dimen144
+\g_tmpa_dim=\dimen145
+\g_tmpb_dim=\dimen146
+\c_zero_skip=\skip69
+\c_max_skip=\skip70
+\l_tmpa_skip=\skip71
+\l_tmpb_skip=\skip72
+\g_tmpa_skip=\skip73
+\g_tmpb_skip=\skip74
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count137
+\c__fp_leading_shift_int=\count138
+\c__fp_middle_shift_int=\count139
+\c__fp_trailing_shift_int=\count140
+\c__fp_big_leading_shift_int=\count141
+\c__fp_big_middle_shift_int=\count142
+\c__fp_big_trailing_shift_int=\count143
+\c__fp_Bigg_leading_shift_int=\count144
+\c__fp_Bigg_middle_shift_int=\count145
+\c__fp_Bigg_trailing_shift_int=\count146
+\c__fp_rand_size_int=\count147
+\c__fp_rand_four_int=\count148
+\c__fp_rand_eight_int=\count149
+\l__sort_length_int=\count150
+\l__sort_min_int=\count151
+\l__sort_top_int=\count152
+\l__sort_max_int=\count153
+\l__sort_true_max_int=\count154
+\l__sort_block_int=\count155
+\l__sort_begin_int=\count156
+\l__sort_end_int=\count157
+\l__sort_A_int=\count158
+\l__sort_B_int=\count159
+\l__sort_C_int=\count160
+\l__tl_build_start_index_int=\count161
+\l__tl_build_index_int=\count162
+\l__tl_analysis_normal_int=\count163
+\l__tl_analysis_index_int=\count164
+\l__tl_analysis_nesting_int=\count165
+\l__tl_analysis_type_int=\count166
+\l__regex_internal_a_int=\count167
+\l__regex_internal_b_int=\count168
+\l__regex_internal_c_int=\count169
+\l__regex_balance_int=\count170
+\l__regex_group_level_int=\count171
+\l__regex_mode_int=\count172
+\c__regex_cs_in_class_mode_int=\count173
+\c__regex_cs_mode_int=\count174
+\l__regex_catcodes_int=\count175
+\l__regex_default_catcodes_int=\count176
+\c__regex_catcode_D_int=\count177
+\c__regex_catcode_S_int=\count178
+\c__regex_catcode_L_int=\count179
+\c__regex_catcode_O_int=\count180
+\c__regex_catcode_A_int=\count181
+\c__regex_all_catcodes_int=\count182
+\l__regex_show_lines_int=\count183
+\l__regex_min_state_int=\count184
+\l__regex_max_state_int=\count185
+\l__regex_left_state_int=\count186
+\l__regex_right_state_int=\count187
+\l__regex_capturing_group_int=\count188
+\l__regex_min_pos_int=\count189
+\l__regex_max_pos_int=\count190
+\l__regex_curr_pos_int=\count191
+\l__regex_start_pos_int=\count192
+\l__regex_success_pos_int=\count193
+\l__regex_curr_char_int=\count194
+\l__regex_curr_catcode_int=\count195
+\l__regex_last_char_int=\count196
+\l__regex_case_changed_char_int=\count197
+\l__regex_curr_state_int=\count198
+\l__regex_step_int=\count199
+\l__regex_min_active_int=\count266
+\l__regex_max_active_int=\count267
+\l__regex_replacement_csnames_int=\count268
+\l__regex_match_count_int=\count269
+\l__regex_min_submatch_int=\count270
+\l__regex_submatch_int=\count271
+\l__regex_zeroth_submatch_int=\count272
+\g__regex_trace_regex_int=\count273
+\c_empty_box=\box36
+\l_tmpa_box=\box37
+\l_tmpb_box=\box38
+\g_tmpa_box=\box39
+\g_tmpb_box=\box40
+\l__box_top_dim=\dimen147
+\l__box_bottom_dim=\dimen148
+\l__box_left_dim=\dimen149
+\l__box_right_dim=\dimen150
+\l__box_top_new_dim=\dimen151
+\l__box_bottom_new_dim=\dimen152
+\l__box_left_new_dim=\dimen153
+\l__box_right_new_dim=\dimen154
+\l__box_internal_box=\box41
+\l__coffin_internal_box=\box42
+\l__coffin_internal_dim=\dimen155
+\l__coffin_offset_x_dim=\dimen156
+\l__coffin_offset_y_dim=\dimen157
+\l__coffin_x_dim=\dimen158
+\l__coffin_y_dim=\dimen159
+\l__coffin_x_prime_dim=\dimen160
+\l__coffin_y_prime_dim=\dimen161
+\c_empty_coffin=\box43
+\l__coffin_aligned_coffin=\box44
+\l__coffin_aligned_internal_coffin=\box45
+\l_tmpa_coffin=\box46
+\l_tmpb_coffin=\box47
+\l__coffin_display_coffin=\box48
+\l__coffin_display_coord_coffin=\box49
+\l__coffin_display_pole_coffin=\box50
+\l__coffin_display_offset_dim=\dimen162
+\l__coffin_display_x_dim=\dimen163
+\l__coffin_display_y_dim=\dimen164
+\l__coffin_bounding_shift_dim=\dimen165
+\l__coffin_left_corner_dim=\dimen166
+\l__coffin_right_corner_dim=\dimen167
+\l__coffin_bottom_corner_dim=\dimen168
+\l__coffin_top_corner_dim=\dimen169
+\l__coffin_scaled_total_height_dim=\dimen170
+\l__coffin_scaled_width_dim=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count274
+\l__driver_tmp_box=\box51
+))
+Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
 
-("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count282
-\g__xparse_grabber_int=\count283
-\l__xparse_m_args_int=\count284
-\l__xparse_v_nesting_int=\count285
-))
-("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
-Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count286
-))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2018/02/21 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count275
+\g__xparse_grabber_int=\count276
+\l__xparse_m_args_int=\count277
+\l__xparse_mandatory_args_int=\count278
+\l__xparse_v_nesting_int=\count279
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count280
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchcmd with sig. '' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretocmd with sig. '' on line 126.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptocmd with sig. '' on line 127.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowcmd with sig. '' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibmacro with sig. 'm' on line 131.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibmacro with sig. 'm' on line 133.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibmacro with sig. 'm' on line 135.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibmacro with sig. 'm' on line 137.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchfieldformat with sig. 'O{*}m' on line 139.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretofieldformat with sig. 'O{*}m' on line 141.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptofieldformat with sig. 'O{*}m' on line 143.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowfieldformat with sig. 'O{*}m' on line 145.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchnameformat with sig. 'O{*}m' on line 147.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretonameformat with sig. 'O{*}m' on line 149.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptonameformat with sig. 'O{*}m' on line 151.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshownameformat with sig. 'O{*}m' on line 153.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchlistformat with sig. 'O{*}m' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretolistformat with sig. 'O{*}m' on line 157.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptolistformat with sig. 'O{*}m' on line 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowlistformat with sig. 'O{*}m' on line 161.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexfieldformat with sig. 'O{*}m' on line 163.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexfieldformat with sig. 'O{*}m' on line 165.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexfieldformat with sig. 'O{*}m' on line 167.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexfieldformat with sig. 'O{*}m' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexnameformat with sig. 'O{*}m' on line 171.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexnameformat with sig. 'O{*}m' on line 173.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexnameformat with sig. 'O{*}m' on line 175.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexnameformat with sig. 'O{*}m' on line 177.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexlistformat with sig. 'O{*}m' on line 179.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexlistformat with sig. 'O{*}m' on line 181.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xappindextolistformat with sig. 'O{*}m' on line 183.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexlistformat with sig. 'O{*}m' on line 185.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibdriver with sig. 'm' on line 187.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibdriver with sig. 'm' on line 189.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibdriver with sig. 'm' on line 191.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibdriver with sig. 'm' on line 193.
+.................................................
+)
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 162.
-Package scrhack Info: loading float hack on input line 169.
+(scrhack)             need that hack, on input line 160.
+Package scrhack Info: loading float hack on input line 167.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\float.hak
-"
-File: float.hak 2020/07/22 v3.31 KOMA-Script scrhack part (hacking package floa
-t)
-Package scrhack Info: redefining \newfloat on input line 163.
-Package scrhack Info: redefining \listof on input line 163.
-Package scrhack Info: undefining \float@addtolists on input line 163.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
+File: float.hak 2017/09/07 v3.24 KOMA-Script package (hacking package float)
+Package scrhack Info: redefining \newfloat on input line 161.
+Package scrhack Info: redefining \listof on input line 161.
+Package scrhack Info: undefining \float@addtolists on input line 161.
 )
-Package scrhack Info: loading setspace hack on input line 197.
+Package scrhack Info: loading setspace hack on input line 195.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\setspace.
-hak"
-File: setspace.hak 2020/07/22 v3.31 KOMA-Script scrhack part (hacking package s
-etspace)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/setspace.hak
+File: setspace.hak 2017/09/07 v3.24 KOMA-Script package (hacking package setspa
+ce)
 ))
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
-"
-Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
-\csq@reset=\count287
-\csq@gtype=\count288
-\csq@glevel=\count289
-\csq@qlevel=\count290
-\csq@maxlvl=\count291
-\csq@tshold=\count292
-\csq@ltx@everypar=\toks27
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
+\csq@reset=\count281
+\csq@gtype=\count282
+\csq@glevel=\count283
+\csq@qlevel=\count284
+\csq@maxlvl=\count285
+\csq@tshold=\count286
+\csq@ltx@everypar=\toks26
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
-"
-File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.cfg
-"
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 )
 Package csquotes Info: Option 'babel' depreciated.
@@ -636,55 +887,49 @@ Package csquotes Info: Option 'babel' depreciated.
 Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty"
-Package: caption 2020/09/02 v3.5a Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty"
-Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
-\captionmargin=\dimen173
-\captionmargin@=\dimen174
-\captionwidth=\dimen175
-\caption@tempdima=\dimen176
-\caption@indent=\dimen177
-\caption@parindent=\dimen178
-\caption@hangindent=\dimen179
-Package caption Info: KOMA-Script document class detected.
-
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/caption\caption-koma.
-sto"
-File: caption-koma.sto 2020/08/22 v2.0 Adaption of the caption package to the K
-OMA-Script document classes (AR)
-))
-\c@caption@flags=\count293
-\c@continuedfloat=\count294
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen172
+\captionmargin@=\dimen173
+\captionwidth=\dimen174
+\caption@tempdima=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
+)
+Package caption Info: KOMA-Script document class.
+\c@ContinuedFloat=\count287
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
-"
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen180
-\lightrulewidth=\dimen181
-\cmidrulewidth=\dimen182
-\belowrulesep=\dimen183
-\belowbottomsep=\dimen184
-\aboverulesep=\dimen185
-\abovetopsep=\dimen186
-\cmidrulesep=\dimen187
-\cmidrulekern=\dimen188
-\defaultaddspace=\dimen189
-\@cmidla=\count295
-\@cmidlb=\count296
-\@aboverulesep=\dimen190
-\@belowrulesep=\dimen191
-\@thisruleclass=\count297
-\@lastruleclass=\count298
-\@thisrulewidth=\dimen192
-) ("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/eurosym\eurosym.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen179
+\lightrulewidth=\dimen180
+\cmidrulewidth=\dimen181
+\belowrulesep=\dimen182
+\belowbottomsep=\dimen183
+\aboverulesep=\dimen184
+\abovetopsep=\dimen185
+\cmidrulesep=\dimen186
+\cmidrulekern=\dimen187
+\defaultaddspace=\dimen188
+\@cmidla=\count288
+\@cmidlb=\count289
+\@aboverulesep=\dimen189
+\@belowrulesep=\dimen190
+\@thisruleclass=\count290
+\@lastruleclass=\count291
+\@thisrulewidth=\dimen191
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box56
+\@eurobox=\box52
 )
 
 Class scrbook Warning: Usage of package `fancyhdr' together
@@ -700,203 +945,197 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              Nevertheless, using requested
 (scrbook)              package `fancyhdr' on input line 127.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-"
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip77
-\f@nch@O@elh=\skip78
-\f@nch@O@erh=\skip79
-\f@nch@O@olh=\skip80
-\f@nch@O@orh=\skip81
-\f@nch@O@elf=\skip82
-\f@nch@O@erf=\skip83
-\f@nch@O@olf=\skip84
-\f@nch@O@orf=\skip85
+\f@nch@headwidth=\skip75
+\f@nch@O@elh=\skip76
+\f@nch@O@erh=\skip77
+\f@nch@O@olh=\skip78
+\f@nch@O@orh=\skip79
+\f@nch@O@elf=\skip80
+\f@nch@O@erf=\skip81
+\f@nch@O@olf=\skip82
+\f@nch@O@orf=\skip83
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\extramarks.s
-ty"
-Package: extramarks 2019/01/31 v3.10 Extra marks for LaTeX
-\@temptokenb=\toks28
-) ("C:\Program Files\MiKTeX\tex/latex/listings\listings.sty"
-\lst@mode=\count299
-\lst@gtempboxa=\box57
-\lst@token=\toks29
-\lst@length=\count300
-\lst@currlwidth=\dimen193
-\lst@column=\count301
-\lst@pos=\count302
-\lst@lostspace=\dimen194
-\lst@width=\dimen195
-\lst@newlines=\count303
-\lst@lineno=\count304
-\lst@maxwidth=\dimen196
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/extramarks.sty
+Package: extramarks 2017/06/30 v3.9a Extra marks for LaTeX
+\@temptokenb=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count292
+\lst@gtempboxa=\box53
+\lst@token=\toks28
+\lst@length=\count293
+\lst@currlwidth=\dimen192
+\lst@column=\count294
+\lst@pos=\count295
+\lst@lostspace=\dimen193
+\lst@width=\dimen194
+\lst@newlines=\count296
+\lst@lineno=\count297
+\lst@maxwidth=\dimen195
 
-("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count305
-\lst@skipnumbers=\count306
-\lst@framebox=\box58
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count298
+\lst@skipnumbers=\count299
+\lst@framebox=\box54
 )
-("C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg"
-File: listings.cfg 2020/03/24 1.8d listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package scrhack Info: loading listings hack on input line 157.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\listings.
-hak"
-File: listings.hak 2020/07/22 v3.31 KOMA-Script scrhack part (hacking package l
-istings)
-Package tocbasic Info: setting babel extension for `lol' on input line 143.
-Package scrhack Info: redefining \lstlistoflistings on input line 143.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/listings.hak
+File: listings.hak 2017/09/07 v3.24 KOMA-Script package (hacking package listin
+gs)
+Package tocbasic Info: setting babel extension for `lol' on input line 137.
+Package scrhack Info: redefining \lstlistoflistings on input line 137.
 )
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/algorithms\algorithm.
-sty"
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 Package tocbasic Info: setting babel extension for `loa' on input line 95.
-\@float@every@algorithm=\toks30
-\c@algorithm=\count307
+\@float@every@algorithm=\toks29
+\c@algorithm=\count300
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/algorithms\algorithmi
-c.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count308
-\c@ALC@line=\count309
-\c@ALC@rem=\count310
-\c@ALC@depth=\count311
-\ALC@tlm=\skip86
-\algorithmicindent=\skip87
-) ("C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty"
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks31
+\c@ALC@unique=\count301
+\c@ALC@line=\count302
+\c@ALC@rem=\count303
+\c@ALC@depth=\count304
+\ALC@tlm=\skip84
+\algorithmicindent=\skip85
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/ntheorem\ntheorem.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
-\theorem@style=\toks32
-\theorem@@style=\toks33
-\theorembodyfont=\toks34
-\theoremnumbering=\toks35
-\theorempreskipamount=\skip88
-\theorempostskipamount=\skip89
-\theoremframepreskipamount=\skip90
-\theoremframepostskipamount=\skip91
-\theoreminframepreskipamount=\skip92
-\theoreminframepostskipamount=\skip93
-\theorem@preskip=\toks36
-\theorem@postskip=\toks37
-\theorem@framepreskip=\toks38
-\theorem@framepostskip=\toks39
-\theorem@inframepreskip=\toks40
-\theorem@inframepostskip=\toks41
-\theoremindent=\dimen197
-\theorem@indent=\dimen198
-\theoremrightindent=\dimen199
-\theorem@rightindent=\dimen256
-\theoremheaderfont=\toks42
-\theoremseparator=\toks43
-\theoremprework=\toks44
-\theorempostwork=\toks45
-\theoremsymbol=\toks46
-\qedsymbol=\toks47
-\theoremkeyword=\toks48
-\qedsymbol=\toks49
-\thm@topsep=\skip94
-\thm@topsepadd=\skip95
+\theorem@style=\toks31
+\theorem@@style=\toks32
+\theorembodyfont=\toks33
+\theoremnumbering=\toks34
+\theorempreskipamount=\skip86
+\theorempostskipamount=\skip87
+\theoremframepreskipamount=\skip88
+\theoremframepostskipamount=\skip89
+\theoreminframepreskipamount=\skip90
+\theoreminframepostskipamount=\skip91
+\theorem@preskip=\toks35
+\theorem@postskip=\toks36
+\theorem@framepreskip=\toks37
+\theorem@framepostskip=\toks38
+\theorem@inframepreskip=\toks39
+\theorem@inframepostskip=\toks40
+\theoremindent=\dimen196
+\theorem@indent=\dimen197
+\theoremrightindent=\dimen198
+\theorem@rightindent=\dimen199
+\theoremheaderfont=\toks41
+\theoremseparator=\toks42
+\theoremprework=\toks43
+\theorempostwork=\toks44
+\theoremsymbol=\toks45
+\qedsymbol=\toks46
+\theoremkeyword=\toks47
+\qedsymbol=\toks48
+\thm@topsep=\skip92
+\thm@topsepadd=\skip93
 Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count312
-\c@currNonectr=\count313
-\mysavskip=\skip96
+\c@endNonectr=\count305
+\c@currNonectr=\count306
+\mysavskip=\skip94
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
-\thm@amstmpdepth=\dimen257
-\tagwidth=\dimen258
+\thm@amstmpdepth=\dimen256
+\tagwidth=\dimen257
 )
-\c@currtheoremctr=\count314
-\c@endtheoremctr=\count315
-\c@theorem=\count316
-\c@currsatzctr=\count317
-\c@endsatzctr=\count318
-\c@currlemmactr=\count319
-\c@endlemmactr=\count320
-\c@currkorollarctr=\count321
-\c@endkorollarctr=\count322
-\c@currpropositionctr=\count323
-\c@endpropositionctr=\count324
-\c@currtheorem*ctr=\count325
-\c@endtheorem*ctr=\count326
-\c@theorem*=\count327
-\c@currsatz*ctr=\count328
-\c@endsatz*ctr=\count329
-\c@satz*=\count330
-\c@currlemma*ctr=\count331
-\c@endlemma*ctr=\count332
-\c@lemma*=\count333
-\c@currkorollar*ctr=\count334
-\c@endkorollar*ctr=\count335
-\c@korollar*=\count336
-\c@currproposition*ctr=\count337
-\c@endproposition*ctr=\count338
-\c@proposition*=\count339
-\c@currdefinitionctr=\count340
-\c@enddefinitionctr=\count341
-\c@currdefinition*ctr=\count342
-\c@enddefinition*ctr=\count343
-\c@definition*=\count344
-\c@currnotationctr=\count345
-\c@endnotationctr=\count346
-\c@notation=\count347
-\c@currkonventionctr=\count348
-\c@endkonventionctr=\count349
-\c@konvention=\count350
-\c@currbezeichnungctr=\count351
-\c@endbezeichnungctr=\count352
-\c@bezeichnung=\count353
-\c@currbeweisctr=\count354
-\c@endbeweisctr=\count355
-\c@beweis=\count356
-\c@currbemerkungctr=\count357
-\c@endbemerkungctr=\count358
-\c@currbeobachtungctr=\count359
-\c@endbeobachtungctr=\count360
-\c@currbeispielctr=\count361
-\c@endbeispielctr=\count362
-\c@currproblemctr=\count363
-\c@endproblemctr=\count364
-\c@problem=\count365
-\c@currbemerkung*ctr=\count366
-\c@endbemerkung*ctr=\count367
-\c@bemerkung*=\count368
-\c@currbeispiel*ctr=\count369
-\c@endbeispiel*ctr=\count370
-\c@beispiel*=\count371
-\c@currproblem*ctr=\count372
-\c@endproblem*ctr=\count373
-\c@problem*=\count374
- ("C:\Program Files\MiKTeX\tex/latex/tools\xspace.sty"
+\c@currtheoremctr=\count307
+\c@endtheoremctr=\count308
+\c@theorem=\count309
+\c@currsatzctr=\count310
+\c@endsatzctr=\count311
+\c@currlemmactr=\count312
+\c@endlemmactr=\count313
+\c@currkorollarctr=\count314
+\c@endkorollarctr=\count315
+\c@currpropositionctr=\count316
+\c@endpropositionctr=\count317
+\c@currtheorem*ctr=\count318
+\c@endtheorem*ctr=\count319
+\c@theorem*=\count320
+\c@currsatz*ctr=\count321
+\c@endsatz*ctr=\count322
+\c@satz*=\count323
+\c@currlemma*ctr=\count324
+\c@endlemma*ctr=\count325
+\c@lemma*=\count326
+\c@currkorollar*ctr=\count327
+\c@endkorollar*ctr=\count328
+\c@korollar*=\count329
+\c@currproposition*ctr=\count330
+\c@endproposition*ctr=\count331
+\c@proposition*=\count332
+\c@currdefinitionctr=\count333
+\c@enddefinitionctr=\count334
+\c@currdefinition*ctr=\count335
+\c@enddefinition*ctr=\count336
+\c@definition*=\count337
+\c@currnotationctr=\count338
+\c@endnotationctr=\count339
+\c@notation=\count340
+\c@currkonventionctr=\count341
+\c@endkonventionctr=\count342
+\c@konvention=\count343
+\c@currbezeichnungctr=\count344
+\c@endbezeichnungctr=\count345
+\c@bezeichnung=\count346
+\c@currbeweisctr=\count347
+\c@endbeweisctr=\count348
+\c@beweis=\count349
+\c@currbemerkungctr=\count350
+\c@endbemerkungctr=\count351
+\c@currbeobachtungctr=\count352
+\c@endbeobachtungctr=\count353
+\c@currbeispielctr=\count354
+\c@endbeispielctr=\count355
+\c@currproblemctr=\count356
+\c@endproblemctr=\count357
+\c@problem=\count358
+\c@currbemerkung*ctr=\count359
+\c@endbemerkung*ctr=\count360
+\c@bemerkung*=\count361
+\c@currbeispiel*ctr=\count362
+\c@endbeispiel*ctr=\count363
+\c@beispiel*=\count364
+\c@currproblem*ctr=\count365
+\c@endproblem*ctr=\count366
+\c@problem*=\count367
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (main.aux
-(chapter/titlepage.aux) (chapter/1.Introduction.aux) (chapter/2.Game.aux)
-(chapter/3.Structure.aux) (chapter/4.GameLogic.aux)
-(chapter/5.ProblemsSolutions.aux) (chapter/appendix.aux))
+ (./main.aux
+(./chapter/titlepage.aux) (./chapter/1.Introduction.aux) (./chapter/2.Game.aux)
+(./chapter/3.Structure.aux) (./chapter/4.GameLogic.aux)
+(./chapter/5.ProblemsSolutions.aux) (./chapter/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -904,84 +1143,71 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
-("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count375
-\scratchdimen=\dimen259
-\scratchbox=\box59
-\nofMPsegments=\count376
-\nofMParguments=\count377
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count378
-\MPscratchDim=\dimen260
-\MPnumerator=\count379
-\makeMPintoPDFobject=\count380
-\everyMPtoPDFconversion=\toks51
-) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+\scratchcounter=\count368
+\scratchdimen=\dimen258
+\scratchbox=\box55
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen259
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks50
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-\AtBeginShipoutBox=\box60
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.jpg,.png,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box56
 Package hyperref Info: Link coloring OFF on input line 15.
 
-("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
-"
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gett
-itlestring.sty"
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count381
+\c@section@level=\count374
 )
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
- (main.out) (main.out)
+
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-Class scrbook Info: loading recommended package `bookmark'.
-(scrbook)           Using `bookmark' together with `hyperref' is recommended,
-(scrbook)           because of handling of possible bookmark level gaps.
-(scrbook)           You can avoid loading `bookmark' with KOMA-Script option
-(scrbook)           `bookmarkpackage=false' before \begin{document} and
-(scrbook)           you can avoid this message adding:
-(scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 15.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/bookmark\bookmark.sty
-"
-Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/bookmark\bkm-pdftex.d
-ef"
-File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-Package auxhook Info: \AddLineBeginMainAux comes a little late,
-(auxhook)             because the main .aux file is already opened on input lin
-e 168.
-\BKM@id=\count382
-))
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape.s
-ty"
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
- ("C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-Package scrhack Info: loading lscape hack on input line 77.
+Package scrhack Info: loading lscape hack on input line 76.
 
-("C:\Users\Lukas Bünger\AppData\Roaming\MiKTeX\tex/latex/koma-script\lscape.ha
-k"
-File: lscape.hak 2020/07/22 v3.31 KOMA-Script scrhack part (hacking package lsc
-ape)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/lscape.hak
+File: lscape.hak 2017/09/07 v3.24 KOMA-Script package (hacking package lscape)
 Package scrhack Info: \landscape patched to make \textheight change optional on
  input line 90.
-\scrh@LT@textheight=\skip97
+\scrh@LT@textheight=\skip95
 ))
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1020,117 +1246,163 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count383
+\c@lstlisting=\count375
 Package scrhack Info: undefining \float@addtolists on input line 15.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 19.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 19.
 \openout2 = `chapter/titlepage.aux'.
 
- (chapter/titlepage.tex
-\links=\skip98
-<bilder/tud_logo_rgb.jpg, id=3, 338.9463pt x 54.6843pt>
+ (./chapter/titlepage.tex
+\links=\skip96
+<bilder/tud_logo_rgb.jpg, id=99, 338.9463pt x 54.6843pt>
 File: bilder/tud_logo_rgb.jpg Graphic file (type jpg)
 <use bilder/tud_logo_rgb.jpg>
 Package pdftex.def Info: bilder/tud_logo_rgb.jpg  used on input line 9.
 (pdftex.def)             Requested size: 227.62204pt x 36.72421pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
-
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
-
-("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-
-
-
-
-{C:/Users/Lukas Bünger/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./bilde
-r/tud_logo_rgb.jpg>])
-[2
-
-
-
-
-] (main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
  [1
 
 
-] [2
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./bilder/tud_logo_rgb.jpg>
+])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+ [2
+
+
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+ (./main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+ [1
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+ [2
 
 
 ]
 \openout2 = `chapter/1.Introduction.aux'.
 
- (chapter/1.Introduction.tex
+ (./chapter/1.Introduction.tex
 chapter 1.
-
-LaTeX Warning: Citation `Abramowski:1991' on page 1 undefined on input line 11.
-
-
-
-LaTeX Warning: Citation `Abramowski:1991' on page 1 undefined on input line 11.
-
-
-
-LaTeX Warning: Citation `Muller:2011' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Khronos:2012' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Reference `Kapitel 2' on page 1 undefined on input line 11.
-
-
-LaTeX Warning: Reference `Kapitel 2' on page 1 undefined on input line 11.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-LaTeX Warning: Citation `Nachname-Diplom:2012' on page 1 undefined on input lin
-e 13.
-
-
-LaTeX Warning: Citation `Nachname-Bachelor:2012' on page 1 undefined on input l
-ine 13.
-
-
-LaTeX Warning: Citation `Nachname-Master:2012' on page 1 undefined on input lin
-e 13.
-
-[1
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 16.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 37.
+ [1
 
 
 
-]) [2]
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+ [2
+
+
+
+]
 \openout2 = `chapter/2.Game.aux'.
 
- (chapter/2.Game.tex
+ (./chapter/2.Game.tex
 chapter 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Hauptmenü.pdf): PDF inclusion
-: found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Hauptmenü.pdf, id=89, 477.28313pt x 357.58594pt>
+pdfTeX warning: pdflatex (file ./bilder/Hauptmenü.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<bilder/Hauptmenü.pdf, id=154, 477.28313pt x 357.58594pt>
 File: bilder/Hauptmenü.pdf Graphic file (type pdf)
 <use bilder/Hauptmenü.pdf>
 Package pdftex.def Info: bilder/Hauptmenü.pdf  used on input line 15.
 (pdftex.def)             Requested size: 238.64098pt x 178.79253pt.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Einstellungen.pdf): PDF inclus
-ion: found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Einstellungen.pdf, id=91, 475.7775pt x 356.0803pt>
+pdfTeX warning: pdflatex (file ./bilder/Einstellungen.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<bilder/Einstellungen.pdf, id=156, 475.7775pt x 356.0803pt>
 File: bilder/Einstellungen.pdf Graphic file (type pdf)
 <use bilder/Einstellungen.pdf>
 Package pdftex.def Info: bilder/Einstellungen.pdf  used on input line 22.
@@ -1142,9 +1414,9 @@ See the caption package documentation for explanation.
 
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Highscore.pdf): PDF inclusion:
- found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Highscore.pdf, id=93, 476.53032pt x 358.33875pt>
+pdfTeX warning: pdflatex (file ./bilder/Highscore.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<bilder/Highscore.pdf, id=158, 476.53032pt x 358.33875pt>
 File: bilder/Highscore.pdf Graphic file (type pdf)
 <use bilder/Highscore.pdf>
 Package pdftex.def Info: bilder/Highscore.pdf  used on input line 30.
@@ -1197,30 +1469,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--38
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
  [3
-
-
-
 
 
 
  <./bilder/Hauptmenü.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
  [4 <./bilder/Einstellungen.pdf> <./bilder/Highscore.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 40.
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Einzelspielermodus.pdf): PDF i
-nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Einzelspielermodus.pdf, id=116, 476.53032pt x 356.83313pt>
+
+pdfTeX warning: pdflatex (file ./bilder/Einzelspielermodus.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<bilder/Einzelspielermodus.pdf, id=183, 476.53032pt x 356.83313pt>
 File: bilder/Einzelspielermodus.pdf Graphic file (type pdf)
 <use bilder/Einzelspielermodus.pdf>
 Package pdftex.def Info: bilder/Einzelspielermodus.pdf  used on input line 45.
 (pdftex.def)             Requested size: 238.26457pt x 178.41612pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
 
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Mehrspielermodus.pdf): PDF inc
-lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Mehrspielermodus.pdf, id=117, 475.7775pt x 356.0803pt>
+pdfTeX warning: pdflatex (file ./bilder/Mehrspielermodus.pdf): PDF inclusion: f
+ound PDF version <1.7>, but at most version <1.5> allowed
+<bilder/Mehrspielermodus.pdf, id=184, 475.7775pt x 356.0803pt>
 File: bilder/Mehrspielermodus.pdf Graphic file (type pdf)
 <use bilder/Mehrspielermodus.pdf>
 Package pdftex.def Info: bilder/Mehrspielermodus.pdf  used on input line 60.
@@ -1238,11 +1532,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--66
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
  [5 <./bilder/Einzelspielermodus.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 67.
 
-pdfTeX warning: miktex-pdftex.exe (file ./bilder/Spielende.pdf): PDF inclusion:
- found PDF version <1.7>, but at most version <1.5> allowed
-<bilder/Spielende.pdf, id=126, 473.51906pt x 355.3275pt>
+
+pdfTeX warning: pdflatex (file ./bilder/Spielende.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<bilder/Spielende.pdf, id=193, 473.51906pt x 355.3275pt>
 File: bilder/Spielende.pdf Graphic file (type pdf)
 <use bilder/Spielende.pdf>
 Package pdftex.def Info: bilder/Spielende.pdf  used on input line 74.
@@ -1265,7 +1572,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--80
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./bilder/Mehrspielermodus.pdf>]) [7 <./bilder/Spielende.pdf>] [8
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 80.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 80.
+ [6 <./bilder/Mehrspielermodus.pdf>])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
+ [7 <./bilder/Spielende.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 43.
+ [8
 
 
 
@@ -1273,21 +1606,50 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout2 = `chapter/3.Structure.aux'.
 
 
-(chapter/3.Structure.tex
+(./chapter/3.Structure.tex
 chapter 3.
-) [9
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+[9
 
 
 
-] [10
-
-
-
-]
+])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+ [10]
 \openout2 = `chapter/4.GameLogic.aux'.
 
- (chapter/4.GameLogic.tex
+ (./chapter/4.GameLogic.tex
 chapter 4.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
 
 Overfull \hbox (31.05763pt too wide) in paragraph at lines 8--10
 \OT1/cmr/m/n/10.95 In die-sem Ka-pi-tel ge-hen wir auf die Haupt-funk-ti-on des
@@ -1295,19 +1657,71 @@ Overfull \hbox (31.05763pt too wide) in paragraph at lines 8--10
 10.95 ()$,
  []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 20.
 )
 Underfull \vbox (badness 4254) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 49.
  [11
 
 
 
+
+
+
 ]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 49.
+
 [12]
 \openout2 = `chapter/5.ProblemsSolutions.aux'.
 
- (chapter/5.ProblemsSolutions.tex
+ (./chapter/5.ProblemsSolutions.tex
 chapter 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 19.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 19.
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 29.
 [13
 
 
@@ -1315,51 +1729,168 @@ chapter 5.
 
 
 
-]) [14] [15] [16
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 31.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+ [14]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+ [15]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+ [16
 
 
 
 ]
 \openout2 = `chapter/appendix.aux'.
 
- (chapter/appendix.tex) [17
+ (./chapter/appendix.tex)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 62.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 62.
+ [17
 
 
 
-] [18
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+ [18
 
 
 
-] (main.lof)
+] (./main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [19] [20
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 67.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+ [19]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+
+[20
 
 
-]
-(main.loa)
+] (./main.loa)
 \tf@loa=\write6
 \openout6 = `main.loa'.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
  [21
 
 
-] [22
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+ [22
 
 
-] (main.lol)
+] (./main.lol)
 \tf@lol=\write7
 \openout7 = `main.lol'.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 80.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 80.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
  [23
 
 
-] [24
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 81.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 81.
+ [24
 
 
 ]
-<Eidesstattliche_Versicherung.pdf, id=228, 597.23125pt x 845.1575pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 90.
+<Eidesstattliche_Versicherung.pdf, id=290, 597.23125pt x 845.1575pt>
 File: Eidesstattliche_Versicherung.pdf Graphic file (type pdf)
 <use Eidesstattliche_Versicherung.pdf>
 Package pdftex.def Info: Eidesstattliche_Versicherung.pdf  used on input line 9
@@ -1372,66 +1903,59 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
  [25
 
 ]
 Overfull \vbox (10.70108pt too high) has occurred while \output is active []
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
 
 [26 <./Eidesstattliche_Versicherung.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
- (main.aux (chapter/titlepage.aux)
-(chapter/1.Introduction.aux) (chapter/2.Game.aux) (chapter/3.Structure.aux)
-(chapter/4.GameLogic.aux) (chapter/5.ProblemsSolutions.aux)
-(chapter/appendix.aux))
+ (./main.aux (./chapter/titlepage.aux) (./chapter/1.Introduction.aux) (./chapte
+r/2.Game.aux)
+(./chapter/3.Structure.aux) (./chapter/4.GameLogic.aux)
+(./chapter/5.ProblemsSolutions.aux) (./chapter/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 105BE82CD9169A9A667B8EDF8AB8A06D;1414.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 18117 strings out of 481199
- 311351 string characters out of 2915323
- 743675 words of memory out of 3000000
- 33260 multiletter control sequences out of 15000+200000
- 544805 words of font info for 66 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 53i,11n,76p,10647b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{algorithm.4.1} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.8} has been referenced but does not exist,
- replaced by a fixed one
-
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (30 pages, 480673 bytes).
+ 24074 strings out of 494757
+ 424334 string characters out of 6175785
+ 618939 words of memory out of 5000000
+ 27038 multiletter control sequences out of 15000+600000
+ 537491 words of font info for 49 fonts, out of 8000000 for 9000
+ 81 hyphenation exceptions out of 8191
+ 51i,11n,68p,10436b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (30 pages, 420648 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 247 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 
