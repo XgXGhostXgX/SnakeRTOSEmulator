@@ -5,7 +5,7 @@
 \chapter{Probleme und L{\"o}sungen}
 \label{Probleme_und_Loesungen}
 %
-Im folgendem Abschnitt werden einige Probleme, die bei der Implementierung des Projektes aufgekommen sind, beschrieben und des weiteren werden verschiedenen L{\"o}sungsans{\"a}zen dazu vorgestellt.
+Im folgendem werden einige Probleme, die bei der Implementierung des Projektes aufgekommen sind, beschrieben und des weiteren werden verschiedenen L{\"o}sungsans{\"a}zen dazu vorgestellt.
 
 \section{Bewegung der Schlange}
 \label{Bewegung der Schlange}
@@ -18,11 +18,18 @@ Deshalb gab es es eine endg{\"u}ltigen L{\"o}sungsansatz, welcher mit zwei Varia
 %
 \section{Elemente Erzeugen}
 \label{Elemente Erzeugen}
+Relativ fr{\"u}h in der Entwicklung des Spiels machten sich Performanceprobleme beim Erstellen neuer Elemente, vor allem des $foodElement$, bemerkbar. Bei zunehmend langer Schlange erh{\"o}hte sich die Rechenzeit f{\"u}r das Finden einer freien Stelle auf dem Spielfeld so stark, dass zum Beispiel nach dem finden des $foodElements$, eine bemerkbare Pause entstand in der das Spiel nicht weiterlief und somit stockte. Diese Pause war allerdings nicht gleichbleibend lang, sondern erschien zuf{\"a}llig und mit unterschiedlicher Dauer, jedoch mit ansteigender L{\"a}nge der Schlange {\"o}fter und l{\"a}nger.
+Dies war zur{\"u}ckzuf{\"u}hren auf unseren Algorithmus zur Bestimmung einer freien Stelle sowie die Speicherung der Schlange in einer Liste. Der Algorithmus suchte pseudo-randomiesiert eine Stelle des Spielfeldes aus und {\"u}berpr{\"u}fte daraufhin, ob ein Element der Schlange bereits auf diesem Feld ist. Falls dies nicht der Fall war, war das Feld geeignet, ansonsten wurde einfach ein anderes Feld ausgesucht und dies solange wiederholt bis ein freies Feld gefunden wurde. Durch eine l{\"a}ngere Schlange stieg somit die Wahrscheinlichkeit, dass ein neues Feld ausgesucht und der {\"u}berpr{\"u}fungsprozess deshalb mehrere Male durchgef{\"u}hrt werden musste. Das gr{\"o}ßte Problem hierbei war aber er {\"u}berpr{\"u}fungsprozess selber, sowie die Speicherung der Schlange in einer verketteten Liste. Um zu {\"u}berpr{\"u}fen, ob das ausgesuchte Feld nicht schon durch die Schlange belegt war, musste die gesamte Schlange Element f{\"u}r Element {\"u}berpr{\"u}ft werden. In Kombination mit der Wahrscheinlichkeit auf mehrere {\"u}berpr{\"u}fungen entstand dadurch bei l{\"a}ngeren Schlangen ein so großer Rechenaufwand, dass die  Verz{\"o}gerung durch den Spieler bemerkbar und somit der Spielfluss ins stocken geraten ist.
+Zur L{\"o}sung des Problems f{\"u}hrten wir eine neue Variable ein, welche auch in der weiteren Entwicklung noch sehr hilfreich wurde: ein zweidimensionales Array mit Integer-Werten, das $fieldArray$. Das $fieldArray$ dient als kompakte Darstellung des aktuellen Zustands des gesamten Spielfelds. Dabei repr{\"a}sentierte jeder der 39 x 29 Integer-Werte eine Stelle auf dem Spielfeld und deren aktuellen Zustand. Ist der Wert 0 ist das Feld frei, ist der Wert 1 ist die Stelle von der Schlange von Spieler 1 belegt. Alle Werte und zugeh{\"o}rigen Zust{\"a}nde sind in 
+%TODO Bild fieldArray-Werte?
+zu sehen.
+Durch das $fieldArray$ ist nun der Prozess des {\"u}berpr{\"u}fens einer Stelle nicht mehr abh{\"a}ngig von der L{\"a}nge der Schlange, sondern kann immer in konstanter Zeit durch einmaliges checken des zugeh{\"o}rigen Wertes im $fieldArray$ erledigt werden. Das Probelm der mehrmaligen {\"u}berpr{\"u}fungen durch Ausw{\"a}hlen eines bereits belegten Feldes ist damit auch trivialisert, da das {\"u}berpr{\"u}fen nun schnell genug von statten geht. Durch das $fieldArray$ wurde auch die weitere Implementierung des Spiel vereinfacht, da durch neue Wertezuweisungen im Array relativ einfach neue Objekte wie W{\"a}nde und $PowerUps$ in die Spiellogik eingef{\"u}hrt werden konnten, und das {\"u}berpr{\"u}fen der Stellen an denen diese Objekte sich befinden durch das $fieldArray$ direkt abgedeckt ist.
+%TODO Bild Tabelle zu Spielfelds
 %
 
 %
 \section{Spielleistung}
 \label{Spielleistung}
 %
-Beim Ausführen des Spiels kam es sehr oft zu Problemen mit der Spielleistung. Insbesondere wenn das Spiel mit anderen Programmen, wie BigBlueButton, gleichzeitig lief. Dies führte in den meisten Fällen zur Verlangsamung des Spielfluss. Desweiteren flackerte das Spiel sehr stark, sodass ältere Frames anstatt des neuen Frames gezeichnet wurden. Weitere Probleme waren häufig auftretende Speicherzugriffsfehler vor allem, wenn das Spiel über eine virtuelle Maschine lief. Jener Fehler führte zur Terminierung des Spiels.  
+Beim Ausf{\"u}hren des Spiels kam es sehr oft zu Problemen mit der Spielleistung. Insbesondere wenn das Spiel mit anderen Programmen, wie BigBlueButton, gleichzeitig lief. Dies f{\"u}hrte in den meisten F{\"a}llen zur Verlangsamung des Spielfluss. Desweiteren flackerte das Spiel sehr stark, sodass {\"a}ltere Frames anstatt des neuen Frames gezeichnet wurden. Weitere Probleme waren h{\"a}ufig auftretende Speicherzugriffsfehler vor allem, wenn das Spiel {\"u}ber eine virtuelle Maschine lief. Jener Fehler f{\"u}hrte zur Terminierung des Spiels.  
 %

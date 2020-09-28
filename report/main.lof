@@ -1,19 +1,17 @@
 \babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Testbilder}}{4}{figure.caption.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{4}{figure.caption.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{4}{figure.caption.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Hauptmenü\relax }}{3}{figure.caption.2}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Einstellungen\relax }}{4}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Highscore\relax }}{4}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Einzelspieler Spiel\relax }}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Mehrspieler Spiel\relax }}{6}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Spielende\relax }}{7}{figure.2.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Weitere Testbilder}}{10}{figure.caption.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {testbild2a}}}{10}{figure.caption.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {testbild2b}}}{10}{figure.caption.4}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {testbild2c}}}{10}{figure.caption.4}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {testbild2d}}}{10}{figure.caption.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Weitere Testbilder}}{14}{figure.caption.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {testbild2a}}}{14}{figure.caption.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {testbild2b}}}{14}{figure.caption.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {testbild2c}}}{14}{figure.caption.6}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {testbild2d}}}{14}{figure.caption.6}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Weitere Testbilder}}{14}{figure.caption.5}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {testbild2a}}}{14}{figure.caption.5}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {testbild2b}}}{14}{figure.caption.5}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {testbild2c}}}{14}{figure.caption.5}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {testbild2d}}}{14}{figure.caption.5}%
 \addvspace {10\p@ }
