@@ -105,7 +105,7 @@ int pausePressed=0;
 bool infosPressed = true;
 
 //Variable for SnakeGameScreen
-int initial=1;
+bool initial=true;
 int initialStop=1;
 bool wallsInitialized = false;
 
@@ -1377,9 +1377,6 @@ void pause(){
 	}
 	//check if P is pressed
 	if(pausePressed && !gameLost){
-		//set frame 0 to stop the game
-		frame = 0;
-
 		//Create Pause Element on Screen
 		static char str[100] = { 0 };
 		sprintf(str,"PAUSE");
@@ -1439,7 +1436,7 @@ void KI(){
  * Highscore: 53
  */
 void KILong(){
-    if(initial == 1) {
+    if(initial) {
         KIState = 3;
     }
     if(KIState == 0) {
@@ -1534,7 +1531,7 @@ void KILong(){
  * For longterm stresstest
  */
 void KISuperLong(){
-    if(initial == 1) {
+    if(initial) {
         frameTicks = 1;
         turnx = 490;
         turny = 110;
@@ -1622,7 +1619,7 @@ void powerUps() {
     if(!disableSpawn){
         
         //inverse Control
-        if(!inverseExists && initial == 0 && multiplayer){
+        if(!inverseExists && !initial && multiplayer){
 			if(rand()%5 == 2) {
 				inverseExists = 1;
 				position * freeField = getRandomFreeField();
@@ -1632,7 +1629,7 @@ void powerUps() {
 			}
 		}
         //Reduce
-        if(!reduceExists && initial == 0 && multiplayer){
+        if(!reduceExists && !initial && multiplayer){
 			if(rand() % 60 == 2) {
 				reduceExists = 1;
 				position * freeField = getRandomFreeField();
@@ -1643,7 +1640,7 @@ void powerUps() {
 		}
         
         //Superfood
-        if(superFoodTimer == 0 && initial == 0) {
+        if(superFoodTimer == 0 && !initial) {
             if(rand() % 50 == 1) {
                 superFoodTimer = 25;
                 position * freeField = getRandomFreeField();
@@ -1836,7 +1833,7 @@ node * foodFound2(int player, node * snake) {
  */
 void reset(){
 	animateLevelDesign=1;
-	initial = 1;
+	initial = true;
 	update=0;
 	entered=0;
 	entered2=0;
@@ -2021,7 +2018,7 @@ void gameOverDrawLogo(int mousePosX, int mousePosY){
 			checkDraw(tumDrawLoadedImage(home_image2, 10, 10),__FUNCTION__);
 			if(tumEventGetMouseLeft()){
 				initialStop=1;
-				initial=1;
+				initial=true;
 				//Reset fieldArray
 				for(int i=0;i<39;i++){
 					for(int j=0;j<29;j++){
@@ -2096,11 +2093,7 @@ void checkGameOver() {
     if(winnerPlayer != 0) {
         gameLost = true;
     }
-
-	if(!gameLost && winnerPlayer == 0 && (initial == 0 || initialStop == 1)) {
-                    frame = frame+1;
-    }
-    else if(gameLost) {
+    if(gameLost) {
         //Create Lost Element on Screen
         static char str[100] = { 0 };
         if(!multiplayer) {
@@ -2137,7 +2130,7 @@ void checkGameOver() {
         	//Button Point Clicked
         	if(tumEventGetMouseLeft()){
         		initialStop=1;
-        		initial=1;
+        		initial=true;
         		//Reset fieldArray
         		for(int i=0;i<39;i++){
         			for(int j=0;j<29;j++){
@@ -2456,7 +2449,7 @@ void collisionDetection(node * snake1, node * snake2) {
 void backToMenu(node * snake1, node * snake2) {
 	if(currentState==1){
 		initialStop=1;
-        initial=1;
+        initial=true;
         //Reset fieldArray
         for(int i=0;i<39;i++){
             for(int j=0;j<29;j++){
@@ -2735,7 +2728,7 @@ void vGameScreen(void *pvParameters)
 			if(xSemaphoreTake(DrawSignal, portMAX_DELAY) ==
 				pdTRUE) {
 				//initial set snake1 direction, start timer, clock is started
-				if(initial==1){
+				if(initial){
                     
                     if(!wallsInitialized) {
                         if(level == 1) {
@@ -2814,26 +2807,18 @@ void vGameScreen(void *pvParameters)
                     		initLevel(level,wallBorder,fieldArray);
                     	}
                     }
-					if(!multiplayer && (buttons.buttons[KEYCODE(W)] || buttons.buttons[KEYCODE(A)] || buttons.buttons[KEYCODE(S)] || buttons.buttons[KEYCODE(D)])){
-						start_t = clock();
-						startClock=1;
-						drawlevel=0;
-						initial = 0;
-					}
-					else if(multiplayer){
-						if(buttons.buttons[KEYCODE(W)] || buttons.buttons[KEYCODE(A)] || buttons.buttons[KEYCODE(S)] || buttons.buttons[KEYCODE(D)]) {
-							p1Ready = true;
+                    if(buttons.buttons[KEYCODE(W)] || buttons.buttons[KEYCODE(A)] || buttons.buttons[KEYCODE(S)] || buttons.buttons[KEYCODE(D)]) {
+                        p1Ready = true;
+                    }
+                    if(buttons.buttons[KEYCODE(UP)] || buttons.buttons[KEYCODE(DOWN)] || buttons.buttons[KEYCODE(LEFT)] || buttons.buttons[KEYCODE(RIGHT)]) {
+                        p2Ready = true;
+                    }
+                    if(p1Ready && (p2Ready || !multiplayer)) {
+                        start_t = clock();
+                        startClock=1;
+                        drawlevel=0;
+                        initial = false;
 					    }
-					    if(buttons.buttons[KEYCODE(UP)] || buttons.buttons[KEYCODE(DOWN)] || buttons.buttons[KEYCODE(LEFT)] || buttons.buttons[KEYCODE(RIGHT)]) {
-					    	p2Ready = true;
-					    }
-					    if(p1Ready && p2Ready) {
-					    	start_t = clock();
-					    	startClock=1;
-					    	drawlevel=0;
-					    	initial = 0;
-					    }
-					}
 				}
 				
 				//To Activate KI Comment Out only Singleplayer snake1 played by Computer
@@ -2854,7 +2839,7 @@ void vGameScreen(void *pvParameters)
                 incrementSpeed();
 
                 //Check Game Over criteria
-               checkGameOver();
+                checkGameOver();
                 
                 //Check next direction of Player and if PowerUpButtons is Pressed
                 playerOneGetNextDirection();
@@ -2909,16 +2894,15 @@ void vGameScreen(void *pvParameters)
 							winnerPlayer = 1;
 						}
 					}
-                
-                    frame = 0;
-
-                    
-                    //Spawn Superfood
-                    powerUps();
-                    
+					
                     if(!initial) {
                         collisionDetection(snake1, snake2);
                     }
+                
+                    //Spawn and manage powerUps
+                    powerUps();
+                    
+                    frame = 0;
                     
                     refresh();
                 }
@@ -2930,6 +2914,10 @@ void vGameScreen(void *pvParameters)
                 
                 //Switch Back to Menu
 				backToMenu(snake1, snake2);
+                
+                if(!gameLost && winnerPlayer == 0 && !pausePressed && (!initial || initialStop == 1)) {
+                    frame++;
+                }
                 
                 xSemaphoreGive(ScreenLock);
 
