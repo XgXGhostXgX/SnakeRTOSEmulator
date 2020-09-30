@@ -9,7 +9,6 @@
 %   Stand: 03.09.2013
 %
 % ----------------------------------------------------------------------
-
 \include{header}
 
 \begin{document}
@@ -29,56 +28,59 @@
 \pdfbookmark{Table of Content}{pdf:toc}
 \pagenumbering{roman}
 \tableofcontents
-\cleardoublepage
+%\cleardoublepage
 \pagenumbering{arabic}
 
 % Inhalte --------------------------------------------------------------
 %Einleitung/Motivation/What is RTOS?
 \include{chapter/1.Introduction}
 
-\cleardoublepage
+%\cleardoublepage
 %Game (Game description,Pictures) Thilli
 \include{chapter/2.Game}
 
-\cleardoublepage
+%\cleardoublepage
 %Structure ("model structure") Dilsan
 \include{chapter/3.Structure}
 
-\cleardoublepage
+%\cleardoublepage
 %Game Logic Lukas
 \include{chapter/4.GameLogic}
 
-\cleardoublepage
+%\cleardoublepage
 %Problems and Solutions
 \include{chapter/5.ProblemsSolutions}
 
 %\include{chapter/erklaerung.tex}
 % Anhang ---------------------------------------------------------------
 %
-\cleardoublepage
-\appendix
+%\cleardoublepage
+%\appendix
 
 
-\include{chapter/appendix}
+%\include{chapter/appendix}
 
 % Abbildungsverzeichnis -------------------------------------------------
 %
 \listoffigures
 \addcontentsline{toc}{chapter}{List of Figures }
-\cleardoublepage
+%\cleardoublepage
 
 % Algorithmenverzeichnis ------------------------------------------------
 %
-\listofalgorithms
-\addcontentsline{toc}{chapter}{List of Algorithms}
-\cleardoublepage
+%\listofalgorithms
+%\addcontentsline{toc}{chapter}{List of Algorithms}
+%\cleardoublepage
 
 % Quellcodeverzeichnis --------------------------------------------------
 %
 \renewcommand{\lstlistlistingname}{List of Source Codes}
+
+
 \lstlistoflistings
 \addcontentsline{toc}{chapter}{List of Source Codes}
-\cleardoublepage
+\href{https://github.com/XgXGhostXgX/SnakeRTOSEmulator.git}{GitHub Repository}
+%\cleardoublepage
 % ----------------------------------------------------------------------
 
 

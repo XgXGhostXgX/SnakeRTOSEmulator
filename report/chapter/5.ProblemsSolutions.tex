@@ -23,8 +23,14 @@ Dies war zur{\"u}ckzuf{\"u}hren auf unseren Algorithmus zur Bestimmung einer fre
 Zur L{\"o}sung des Problems wurde eine neue Variable eingef{\"u}hrt, welche auch in der weiteren Entwicklung noch sehr hilfreich wurde: ein zweidimensionales Array mit Integer-Werten, das $fieldArray$. Das $fieldArray$ dient als kompakte Darstellung des aktuellen Zustands des gesamten Spielfelds. Dabei repr{\"a}sentierte jeder der 39 x 29 Integer-Werte eine Stelle auf dem Spielfeld und deren aktuellen Zustand. Ist der Wert 0 ist das Feld frei, ist der Wert 1 ist die Stelle von der Schlange von Spieler 1 belegt usw. . Alle Werte und zugeh{\"o}rigen Zust{\"a}nde sind in Tabelle \ref{tbl:Fieldarray-Werte}zu sehen.
 \\
 Durch das $fieldArray$ ist nun der Prozess des {\"u}berpr{\"u}fens einer Stelle nicht mehr abh{\"a}ngig von der L{\"a}nge der Schlange, sondern kann immer in konstanter Zeit durch einmaliges checken des zugeh{\"o}rigen Wertes im $fieldArray$ erledigt werden. Das Problem der mehrmaligen {\"u}berpr{\"u}fungen durch Ausw{\"a}hlen eines bereits belegten Feldes ist damit auch trivialisert, da das {\"u}berpr{\"u}fen nun schnell genug geht. Durch das $fieldArray$ wurde auch die weitere Implementierung des Spiels vereinfacht, da durch neue Wertezuweisungen im Array relativ einfach neue Objekte wie W{\"a}nde und PowerUps in die Spiellogik eingef{\"u}hrt werden konnten, und das {\"u}berpr{\"u}fen der Stellen an denen diese Objekte sich befinden durch das $fieldArray$ direkt abgedeckt ist.
-%TODO Bild Tabelle zu Spielfelds
-%
+
+\begin{minipage}[X]{1.1\textwidth}
+ \centering
+ \includegraphics[scale=0.3]{bilder/FieldArraySpielfeld}
+ \captionof{figure}{Darstellung des eines Spielfeldes mit dazugehörigem $fieldArray$}
+ \label{fig:FieldArraySpielfeld}
+\end{minipage}
+
 
 \begin{table}
      \centering
