@@ -15,6 +15,7 @@ Bei der Implementierung der Schlange wurde am Anfang erst ein Quadrat erstellt, 
 Der erste L{\"o}sungsansatz war mit Hilfe von einer Variable die aktuelle Richtung zu speichern um je nachdem in die andere Achse zu laufen. Damit wird verhindert direkt in die entgegengesetzte Richtung zu laufen. Jedoch wurde das Problem noch nicht behoben, da durch das gleichzeitige Benutzen von mehreren Richtungseingaben die Variable eine falsche Richtung erh{\"a}lt und somit die entgegengesetzte Richtung erlaubt. Dies kann so schnell passieren, sodass die Schlange die zweite Richtung nicht wahrnimmt und sofort in die entgegengesetzte Richtung l{\"a}uft.
 
 Deshalb gab es einen endg{\"u}ltigen L{\"o}sungsansatz, welcher mit zwei Variablen und mit der Methode, die jeden Schritt der Schlange verarbeitet, arbeitet. Die Variablen sind dabei einmal $p1Direction$ (f{\"u}r Player1 und Player2 $p2Direction$) f{\"u}r die aktuelle Richtung und $p1NextDirection$ (f{\"u}r Player1 und Player2 $p2NextDirection$) f{\"u}r die n{\"a}chste Richtung. Die Idee mit dem Verhindern der Achse bleibt. Jedoch wird die aktuelle Richtung erst auf die neue Richtung gesetzt, sobald die Schlange sich um ein Feld bewegt. 
+\newpage
 %
 \section{Elemente Erzeugen}
 \label{Elemente Erzeugen}
@@ -31,8 +32,7 @@ Durch das $fieldArray$ ist nun der Prozess des {\"u}berpr{\"u}fens einer Stelle 
  \label{fig:FieldArraySpielfeld}
 \end{minipage}
 
-
-\begin{table}
+\begin{table}[h]
      \centering
      \begin{tabular}{ll}
        \textbf{Wert}  & \textbf{Objekt} \\

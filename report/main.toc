@@ -1,0 +1,23 @@
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Einleitung}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation und Hintergrund}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Aufbau und Umgebung der Arbeit}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Spiel}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Spiel - Hauptmen{\"u}}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Spiel - Einzelspielermodus}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Spiel - Mehrspielermodus}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Spiel - Spielende}{7}{section.2.4}
+\contentsline {chapter}{\numberline {3}Struktur}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Zust{\"a}nde}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Verh{\"a}ltnisse der Elemente}{8}{section.3.2}
+\contentsline {chapter}{\numberline {4}Spiellogik}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}Initialisierung}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hauptschleife}{11}{section.4.2}
+\contentsline {section}{\numberline {4.3}PowerUps}{12}{section.4.3}
+\contentsline {chapter}{\numberline {5}Probleme und L{\"o}sungen}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}Bewegung der Schlange}{14}{section.5.1}
+\contentsline {section}{\numberline {5.2}Elemente Erzeugen}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}Spielleistung}{16}{section.5.3}
+\contentsline {chapter}{List of Figures }{17}{chapter*.4}
+\contentsline {chapter}{List of Source Codes}{18}{chapter*.5}
+\contentsline {chapter}{Eidesstattliche Versicherung}{18}{chapter*.5}
