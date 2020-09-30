@@ -107,7 +107,7 @@ bool infosPressed = true;
 //Variable for SnakeGameScreen
 bool initial=true;
 int initialStop=1;
-bool wallsInitialized = false;
+bool levelInitialized = false;
 
 //Variables for graphics
 int levelAnimate=0;
@@ -118,7 +118,6 @@ int animateLevel=0;
 
 //Variables for the Foodelements
 int food1X, food1Y, food2X, food2Y;
-bool foodCreated = false;
 int randFood=1;
 int twoFoodElements = 0;
 
@@ -1620,7 +1619,7 @@ void powerUps() {
         
         //inverse Control
         if(!inverseExists && !initial && multiplayer){
-			if(rand()%5 == 2) {
+			if(rand()%50 == 2) {
 				inverseExists = 1;
 				position * freeField = getRandomFreeField();
 				inverseX = arrayPosToCoords(freeField -> x);
@@ -1630,7 +1629,7 @@ void powerUps() {
 		}
         //Reduce
         if(!reduceExists && !initial && multiplayer){
-			if(rand() % 60 == 2) {
+			if(rand() % 50 == 2) {
 				reduceExists = 1;
 				position * freeField = getRandomFreeField();
 				reduceX = arrayPosToCoords(freeField -> x);
@@ -1641,7 +1640,7 @@ void powerUps() {
         
         //Superfood
         if(superFoodTimer == 0 && !initial) {
-            if(rand() % 50 == 1) {
+            if(rand() % 25 == 1) {
                 superFoodTimer = 25;
                 position * freeField = getRandomFreeField();
                 superFoodX = arrayPosToCoords(freeField -> x);
@@ -1658,7 +1657,7 @@ void powerUps() {
 		
         //Freeze
         if(!freezeExists && initial == 0 && multiplayer) {
-            if(rand() % 10 == 1) {
+            if(rand() % 50 == 1) {
                 freezeExists = true;
                 position * freeField = getRandomFreeField();
                 freezeX = arrayPosToCoords(freeField -> x);
@@ -1672,7 +1671,7 @@ void powerUps() {
             p1PowerUpButtonPressed = false;
             if(p1PowerUp == 12) {
                 p1PowerUp = 0;
-                playerTwoFrozen = 5;
+                playerTwoFrozen = 15;
             }
             else if(p1PowerUp == 13){
 				p1PowerUp = 0;
@@ -1687,7 +1686,7 @@ void powerUps() {
             p2PowerUpButtonPressed = false;
             if(p2PowerUp == 12) {
                 p2PowerUp = 0;
-                playerOneFrozen = 5;
+                playerOneFrozen = 15;
             }
             else if(p2PowerUp == 13){
 				p2PowerUp = 0;
@@ -1838,8 +1837,7 @@ void reset(){
 	entered=0;
 	entered2=0;
 	readHighscoreFile=1;
-    foodCreated = false;
-    wallsInitialized = false;
+    levelInitialized = false;
 	animateLevel=0;
     superFoodTimer = 0;
 	buttons.buttons[KEYCODE(W)]=0;
@@ -2690,38 +2688,12 @@ void vGameScreen(void *pvParameters)
     while(randomSeed > 0) {
         randomSeed--;
     }
+    
+    position * p0 = newPosition(0,0);
+    snake1 = createLinkedList(p0);
+    snake2 = createLinkedList(p0);
 
-    //Random position for player One
-    	randomStart = getRandomFreeField();
-    	p1X = arrayPosToCoords(randomStart -> x);
-    	p1Y = arrayPosToCoords(randomStart -> y);
-
-    	//Random position for player Two
-    	randomStart = getRandomFreeField();
-    	p2X = arrayPosToCoords(randomStart -> x);
-    	p2Y = arrayPosToCoords(randomStart -> y);
-
-
-    	fieldArray[coordsToArrayPos(p1X)][coordsToArrayPos(p1Y)] = 1;
-    	position * p11 = newPosition(p1X,p1Y);
-    	snake1 = createLinkedList(p11);
-    	position * p21 = newPosition(p1X,p1Y);
-    	snake1 = addAsFirst(snake1,p21);
-    	position * p31 = newPosition(p1X,p1Y);
-    	snake1 = addAsFirst(snake1,p31);
-
-    	if(multiplayer){
-    		fieldArray[coordsToArrayPos(p2X)][coordsToArrayPos(p2Y)] = 2;
-    	}
-    	position * p12 = newPosition(p1X,p1Y);
-    	snake2 = createLinkedList(p12);
-    	position * p22 = newPosition(p1X,p1Y);
-    	snake2 = addAsFirst(snake2,p22);
-    	position * p32 = newPosition(p1X,p1Y);
-    	snake2 = addAsFirst(snake2,p32);
-
-    	p1Ready = false;
-    	p2Ready = false;
+    
 
  	while(1) {
 		if(DrawSignal) {
@@ -2730,7 +2702,7 @@ void vGameScreen(void *pvParameters)
 				//initial set snake1 direction, start timer, clock is started
 				if(initial){
                     
-                    if(!wallsInitialized) {
+                    if(!levelInitialized) {
                         if(level == 1) {
                             //Level 1 has no inner walls, do nothing
                         }
@@ -2790,15 +2762,46 @@ void vGameScreen(void *pvParameters)
                                 fieldArray[randomPos -> x][randomPos -> y] = 3;
                             }
                         }
-                        wallsInitialized = true;
-                    }
-                    if(!foodCreated) {
+                        
+                        //Random position for player One
+                        randomStart = getRandomFreeField();
+    	                p1X = arrayPosToCoords(randomStart -> x);
+                    	p1Y = arrayPosToCoords(randomStart -> y);
+
+                    	//Random position for player Two
+                    	randomStart = getRandomFreeField();
+                    	p2X = arrayPosToCoords(randomStart -> x);
+                    	p2Y = arrayPosToCoords(randomStart -> y);
+
+
+                    	fieldArray[coordsToArrayPos(p1X)][coordsToArrayPos(p1Y)] = 1;
+                    	position * p11 = newPosition(p1X,p1Y);
+                    	snake1 = createLinkedList(p11);
+                    	position * p21 = newPosition(p1X,p1Y);
+                    	snake1 = addAsFirst(snake1,p21);
+                    	position * p31 = newPosition(p1X,p1Y);
+                    	snake1 = addAsFirst(snake1,p31);
+
+                    	if(multiplayer){
+                    		fieldArray[coordsToArrayPos(p2X)][coordsToArrayPos(p2Y)] = 2;
+                    	}
+                    	position * p12 = newPosition(p1X,p1Y);
+                    	snake2 = createLinkedList(p12);
+                    	position * p22 = newPosition(p1X,p1Y);
+                    	snake2 = addAsFirst(snake2,p22);
+                    	position * p32 = newPosition(p1X,p1Y);
+                    	snake2 = addAsFirst(snake2,p32);
+
+                    	p1Ready = false;
+                    	p2Ready = false;
+                        
                         createRandomFood();
                         if(multiplayer) {
                             createRandomFood();
                         }
-                        foodCreated = true;
+                        levelInitialized = true;
                     }
+                    
                     if(animateLevelDesign){
                     	if(frame==4){
                     		animateLevel=1;
@@ -2807,6 +2810,8 @@ void vGameScreen(void *pvParameters)
                     		initLevel(level,wallBorder,fieldArray);
                     	}
                     }
+                    
+                    
                     if(buttons.buttons[KEYCODE(W)] || buttons.buttons[KEYCODE(A)] || buttons.buttons[KEYCODE(S)] || buttons.buttons[KEYCODE(D)]) {
                         p1Ready = true;
                     }
